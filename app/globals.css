@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C252;
+  --gold-dark: #b8860b;
+  --cream: #FAFAF5;
+  --charcoal: #1A1A1A;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-dm-sans: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  background-color: var(--cream);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+/* Gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C9A84C 0%, #E8C252 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold border animated */
+.gold-border-animated {
+  position: relative;
+}
+.gold-border-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+.gold-border-animated:hover::after {
+  width: 100%;
+}
+
+/* Section reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Circuit pattern background */
+.circuit-bg {
+  background-image:
+    linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0e8;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+
+/* Gold shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.gold-shimmer {
+  background: linear-gradient(90deg, #C9A84C, #E8C252, #C9A84C, #b8860b, #C9A84C);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Nav link hover */
+.nav-link {
+  position: relative;
+  font-family: var(--font-dm-sans);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--gold-dark);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }

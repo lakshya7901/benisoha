@@ -1,0 +1,68 @@
+# Node modules
+/node_modules
+
+# Next.js build output
+/.next/
+/out/
+
+# Production build
+/build
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Dependency directories
+.pnp
+.pnp.js
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+/coverage
+
+# Misc
+*.log
+*.lock
+
+# Optional: ignore package lock if needed (not recommended usually)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Debug
+*.pem
+
+# Storybook (if used)
+/storybook-static
+
+# Turbo repo (if used)
+.turbo
+
+# ESLint cache
+.eslintcache
+
+# Prettier cache
+.prettiercache

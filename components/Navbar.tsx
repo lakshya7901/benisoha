@@ -52,7 +52,7 @@ export default function Navbar() {
                 fontFamily="Cormorant Garamond, serif"
                 fontWeight="600"
               >
-                TF
+                BF
               </text>
             </svg>
           </div>
@@ -61,10 +61,10 @@ export default function Navbar() {
               className="text-sm font-semibold tracking-widest text-charcoal group-hover:text-gold-600 transition-colors"
               style={{ fontFamily: "var(--font-cormorant)", fontSize: "1rem" }}
             >
-              TechForge
+              Benisoha
             </div>
-            <div className="text-[9px] tracking-[0.2em] uppercase text-gold-600 font-light">
-              Solutions
+            <div className="text-[9px] tracking-[0.2em] uppercase text-gold-600 font-semibold">
+              Fusion
             </div>
           </div>
         </a>

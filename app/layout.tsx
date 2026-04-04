@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TechForge Solutions | Software & Electrical Infrastructure",
+  title: "Benisoha Fusion | Software & Electrical Infrastructure",
   description:
     "Premium software development, automation solutions, and city electrical infrastructure services. Quality work, safety, and timely execution.",
   keywords: "software development, automation, electrical infrastructure, power line installation, application development",

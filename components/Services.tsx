@@ -63,7 +63,7 @@ function ServiceCard({
 }) {
   return (
     <div
-      className="reveal group p-6 border border-gray-100 hover:border-gold-300 bg-white hover:shadow-[0_8px_40px_rgba(201,168,76,0.12)] transition-all duration-400 cursor-default"
+      className="reveal group p-6 border border-gray-100 hover:border-gold-300 bg-white hover:shadow-[0_8px_40px_rgba(255,185,0,0.12)] transition-all duration-400 cursor-default"
       style={{ transitionDelay: `${delay}s` }}
     >
       <div className="flex items-start gap-4">
@@ -83,7 +83,7 @@ function ServiceCard({
           >
             {title}
           </h4>
-          <p className="text-sm text-gray-500 leading-relaxed" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+          <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
             {desc}
           </p>
         </div>
@@ -129,7 +129,7 @@ export default function Services() {
             style={{
               fontFamily: "var(--font-cormorant)",
               fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              fontWeight: 400,
+              fontWeight: 500,
               color: "#1A1A1A",
             }}
           >
@@ -175,7 +175,7 @@ export default function Services() {
               <div className="flex-shrink-0">
                 <div className="w-10 h-10 bg-charcoal flex items-center justify-center">
                   <svg viewBox="0 0 20 20" className="w-5 h-5" fill="none">
-                    <path d="M10 2L12 8H18L13 12L15 18L10 14L5 18L7 12L2 8H8L10 2Z" stroke="#C9A84C" strokeWidth="1.2" fill="rgba(201,168,76,0.2)"/>
+                    <path d="M10 2L12 8H18L13 12L15 18L10 14L5 18L7 12L2 8H8L10 2Z" stroke="#ffb900" strokeWidth="1.2" fill="rgba(255,185,0,0.2)"/>
                   </svg>
                 </div>
               </div>

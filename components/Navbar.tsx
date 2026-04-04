@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_1px_30px_rgba(201,168,76,0.12)] py-3"
+          ? "bg-white/95 backdrop-blur-md shadow-[0_1px_30px_rgba(255,185,0,0.12)] py-3"
           : "bg-transparent py-6"
       }`}
     >
@@ -34,20 +34,20 @@ export default function Navbar() {
             <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <polygon
                 points="18,2 34,10 34,26 18,34 2,26 2,10"
-                stroke="#C9A84C"
+                stroke="#ffb900"
                 strokeWidth="1.5"
                 fill="none"
               />
               <polygon
                 points="18,8 28,13 28,23 18,28 8,23 8,13"
-                fill="#C9A84C"
+                fill="#ffb900"
                 opacity="0.15"
               />
               <text
                 x="18"
                 y="22"
                 textAnchor="middle"
-                fill="#C9A84C"
+                fill="#ffb900"
                 fontSize="11"
                 fontFamily="Cormorant Garamond, serif"
                 fontWeight="600"

@@ -8,7 +8,7 @@ const pillars = [
     desc: "Every project is executed with meticulous attention to detail, meeting the highest industry standards.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 4L23.5 14.5H34.5L26 21.5L29.5 32L20 25L10.5 32L14 21.5L5.5 14.5H16.5L20 4Z" stroke="#C9A84C" strokeWidth="1.2" fill="rgba(201,168,76,0.1)"/>
+        <path d="M20 4L23.5 14.5H34.5L26 21.5L29.5 32L20 25L10.5 32L14 21.5L5.5 14.5H16.5L20 4Z" stroke="#ffb900" strokeWidth="1.2" fill="rgba(255,185,0,0.1)"/>
       </svg>
     ),
   },
@@ -17,8 +17,8 @@ const pillars = [
     desc: "We adhere to strict safety protocols across all operations — from coding practices to on-site electrical work.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 4L34 10V22C34 29 27 35 20 37C13 35 6 29 6 22V10L20 4Z" stroke="#C9A84C" strokeWidth="1.2" fill="rgba(201,168,76,0.1)"/>
-        <path d="M14 20L18 24L26 16" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M20 4L34 10V22C34 29 27 35 20 37C13 35 6 29 6 22V10L20 4Z" stroke="#ffb900" strokeWidth="1.2" fill="rgba(255,185,0,0.1)"/>
+        <path d="M14 20L18 24L26 16" stroke="#ffb900" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -27,8 +27,8 @@ const pillars = [
     desc: "We respect deadlines. Project timelines are planned carefully and monitored throughout delivery.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="15" stroke="#C9A84C" strokeWidth="1.2" fill="rgba(201,168,76,0.1)"/>
-        <path d="M20 11V20L26 24" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="20" cy="20" r="15" stroke="#ffb900" strokeWidth="1.2" fill="rgba(255,185,0,0.1)"/>
+        <path d="M20 11V20L26 24" stroke="#ffb900" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -77,7 +77,7 @@ export default function About() {
               style={{
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(2.2rem, 4vw, 3.5rem)",
-                fontWeight: 400,
+                fontWeight: 500,
                 color: "#1A1A1A",
               }}
             >
@@ -85,14 +85,14 @@ export default function About() {
               <span className="italic text-gold-gradient">Software & Infrastructure</span>
             </h2>
 
-            <p className="reveal text-gray-600 leading-relaxed mb-6 text-base" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300, transitionDelay: "0.1s" }}>
+            <p className="reveal text-gray-800 leading-relaxed mb-6 text-base" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500, transitionDelay: "0.1s" }}>
               We are a software and technical services company delivering cutting-edge
               application development, intelligent automation solutions, and comprehensive
               digital support. Our engineering team brings together deep technology expertise
               with a passion for elegant, scalable solutions.
             </p>
 
-            <p className="reveal text-gray-600 leading-relaxed mb-10 text-base" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300, transitionDelay: "0.2s" }}>
+            <p className="reveal text-gray-800 leading-relaxed mb-10 text-base" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500, transitionDelay: "0.2s" }}>
               Beyond digital, we are also trusted by the Electricity Department for city
               electrical infrastructure — including power line installation and pole erection
               projects. We bring the same precision and rigor from software engineering to
@@ -107,7 +107,7 @@ export default function About() {
 
             <blockquote
               className="reveal border-l-2 border-gold-400 pl-6 text-lg italic text-gray-700"
-              style={{ fontFamily: "var(--font-cormorant)", fontWeight: 400, transitionDelay: "0.3s" }}
+              style={{ fontFamily: "var(--font-cormorant)", fontWeight: 500, transitionDelay: "0.3s" }}
             >
               "We don't just build systems — we build the infrastructure that powers communities."
             </blockquote>
@@ -131,7 +131,7 @@ export default function About() {
                   >
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+                  <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
                     {pillar.desc}
                   </p>
                 </div>

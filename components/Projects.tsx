@@ -94,7 +94,7 @@ export default function Projects() {
               style={{
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(2rem, 4vw, 3.2rem)",
-                fontWeight: 400,
+                fontWeight: 500,
               }}
             >
               Featured <span className="italic text-gold-gradient">Projects</span>
@@ -110,7 +110,7 @@ export default function Projects() {
                 className={`px-4 py-2 text-xs tracking-widest uppercase transition-all duration-300 ${
                   filter === cat
                     ? "bg-gold-gradient text-white"
-                    : "border border-gray-200 text-gray-500 hover:border-gold-300 hover:text-gold-700"
+                    : "border border-gray-200 text-gray-700 hover:border-gold-300 hover:text-gold-700"
                 }`}
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
@@ -125,7 +125,7 @@ export default function Projects() {
           {filtered.map((project, i) => (
             <div
               key={project.title}
-              className="reveal group border border-gray-100 hover:border-gold-200 hover:shadow-[0_12px_40px_rgba(201,168,76,0.10)] transition-all duration-400 bg-white"
+              className="reveal group border border-gray-100 hover:border-gold-200 hover:shadow-[0_12px_40px_rgba(255,185,0,0.10)] transition-all duration-400 bg-white"
               style={{ transitionDelay: `${i * 0.06}s` }}
             >
               {/* Top accent bar */}
@@ -147,7 +147,7 @@ export default function Projects() {
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-gray-500 leading-relaxed mb-6" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+                <p className="text-sm text-gray-700 leading-relaxed mb-6" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
                   {project.desc}
                 </p>
 

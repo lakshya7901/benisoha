@@ -31,8 +31,8 @@ export default function Hero() {
 
         {/* Diagonal line accents */}
         <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <line x1="0" y1="100%" x2="30%" y2="0" stroke="#C9A84C" strokeWidth="0.5" opacity="0.15" />
-          <line x1="70%" y1="0" x2="100%" y2="100%" stroke="#C9A84C" strokeWidth="0.5" opacity="0.15" />
+          <line x1="0" y1="100%" x2="30%" y2="0" stroke="#ffb900" strokeWidth="0.5" opacity="0.15" />
+          <line x1="70%" y1="0" x2="100%" y2="100%" stroke="#ffb900" strokeWidth="0.5" opacity="0.15" />
         </svg>
       </div>
 
@@ -61,7 +61,7 @@ export default function Hero() {
               style={{
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(3rem, 6vw, 5.5rem)",
-                fontWeight: 300,
+                fontWeight: 500,
                 color: "#1A1A1A",
               }}
             >
@@ -77,8 +77,8 @@ export default function Hero() {
 
             {/* Sub-heading */}
             <p
-              className="text-base md:text-lg leading-relaxed text-gray-600 mb-10 max-w-lg"
-              style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}
+              className="text-base md:text-lg leading-relaxed text-gray-800 mb-10 max-w-lg"
+              style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}
             >
               From enterprise software and intelligent automation to city-scale
               electrical infrastructure — we deliver precision, quality, and
@@ -89,7 +89,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#services"
-                className="px-8 py-3.5 bg-gold-gradient text-white text-xs tracking-widest uppercase font-medium hover:shadow-[0_8px_30px_rgba(201,168,76,0.4)] hover:-translate-y-0.5 transition-all duration-300"
+                className="px-8 py-3.5 bg-gold-gradient text-white text-xs tracking-widest uppercase font-medium hover:shadow-[0_8px_30px_rgba(255,185,0,0.4)] hover:-translate-y-0.5 transition-all duration-300"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
                 Our Services
@@ -113,7 +113,7 @@ export default function Hero() {
                 <div key={item.label} className="flex items-center gap-2">
                   <span className="text-gold-500 text-xs">{item.icon}</span>
                   <span
-                    className="text-xs tracking-wider text-gray-500 uppercase"
+                    className="text-xs tracking-wider text-gray-700 uppercase"
                     style={{ fontFamily: "var(--font-dm-sans)" }}
                   >
                     {item.label}
@@ -135,18 +135,18 @@ export default function Hero() {
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
                 <svg viewBox="0 0 120 120" className="w-20 h-20 mb-4" xmlns="http://www.w3.org/2000/svg">
                   {/* Lightning bolt for electrical */}
-                  <polygon points="65,10 45,65 60,65 55,110 75,55 60,55" fill="#C9A84C" opacity="0.9"/>
+                  <polygon points="65,10 45,65 60,65 55,110 75,55 60,55" fill="#ffb900" opacity="0.9"/>
                   {/* Circuit dots */}
-                  <circle cx="25" cy="30" r="3" fill="#C9A84C" opacity="0.5"/>
-                  <circle cx="95" cy="30" r="3" fill="#C9A84C" opacity="0.5"/>
-                  <circle cx="25" cy="90" r="3" fill="#C9A84C" opacity="0.5"/>
-                  <circle cx="95" cy="90" r="3" fill="#C9A84C" opacity="0.5"/>
-                  <line x1="28" y1="30" x2="45" y2="30" stroke="#C9A84C" strokeWidth="1" opacity="0.4"/>
-                  <line x1="75" y1="30" x2="92" y2="30" stroke="#C9A84C" strokeWidth="1" opacity="0.4"/>
-                  <line x1="25" y1="33" x2="25" y2="87" stroke="#C9A84C" strokeWidth="1" opacity="0.4"/>
-                  <line x1="95" y1="33" x2="95" y2="87" stroke="#C9A84C" strokeWidth="1" opacity="0.4"/>
-                  <line x1="28" y1="90" x2="55" y2="90" stroke="#C9A84C" strokeWidth="1" opacity="0.4"/>
-                  <line x1="75" y1="90" x2="92" y2="90" stroke="#C9A84C" strokeWidth="1" opacity="0.4"/>
+                  <circle cx="25" cy="30" r="3" fill="#ffb900" opacity="0.5"/>
+                  <circle cx="95" cy="30" r="3" fill="#ffb900" opacity="0.5"/>
+                  <circle cx="25" cy="90" r="3" fill="#ffb900" opacity="0.5"/>
+                  <circle cx="95" cy="90" r="3" fill="#ffb900" opacity="0.5"/>
+                  <line x1="28" y1="30" x2="45" y2="30" stroke="#ffb900" strokeWidth="1" opacity="0.4"/>
+                  <line x1="75" y1="30" x2="92" y2="30" stroke="#ffb900" strokeWidth="1" opacity="0.4"/>
+                  <line x1="25" y1="33" x2="25" y2="87" stroke="#ffb900" strokeWidth="1" opacity="0.4"/>
+                  <line x1="95" y1="33" x2="95" y2="87" stroke="#ffb900" strokeWidth="1" opacity="0.4"/>
+                  <line x1="28" y1="90" x2="55" y2="90" stroke="#ffb900" strokeWidth="1" opacity="0.4"/>
+                  <line x1="75" y1="90" x2="92" y2="90" stroke="#ffb900" strokeWidth="1" opacity="0.4"/>
                 </svg>
 
                 <p
@@ -156,7 +156,7 @@ export default function Hero() {
                   Power & Code
                 </p>
                 <p
-                  className="text-[11px] text-gray-400 mt-1 tracking-wider"
+                  className="text-[11px] text-gray-800 mt-1 tracking-wider"
                   style={{ fontFamily: "var(--font-dm-sans)" }}
                 >
                   Where Tech Meets Infrastructure

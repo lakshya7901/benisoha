@@ -88,7 +88,7 @@ export default function Contact() {
               style={{
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(2rem, 4vw, 3rem)",
-                fontWeight: 400,
+                fontWeight: 500,
               }}
             >
               Let&apos;s Build{" "}
@@ -99,7 +99,7 @@ export default function Contact() {
               Great Together
             </h2>
 
-            <p className="reveal text-sm text-gray-500 leading-relaxed mb-10" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300, transitionDelay: "0.15s" }}>
+            <p className="reveal text-sm text-gray-700 leading-relaxed mb-10" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500, transitionDelay: "0.15s" }}>
               Whether you need a software solution, automation pipeline, or
               infrastructure support — our team is ready to scope your project
               and deliver with precision.
@@ -113,7 +113,7 @@ export default function Contact() {
                   value: "hello@techforgesolutions.com",
                   icon: (
                     <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none">
-                      <path d="M2 5L10 11L18 5M2 5H18V15H2V5Z" stroke="#C9A84C" strokeWidth="1.2"/>
+                      <path d="M2 5L10 11L18 5M2 5H18V15H2V5Z" stroke="#ffb900" strokeWidth="1.2"/>
                     </svg>
                   ),
                 },
@@ -122,7 +122,7 @@ export default function Contact() {
                   value: "+91 98765 43210",
                   icon: (
                     <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none">
-                      <path d="M3 3h4l2 5-2.5 1.5A11 11 0 0011.5 13.5L13 11l5 2v4a1 1 0 01-1 1C7 18 2 13 2 4a1 1 0 011-1z" stroke="#C9A84C" strokeWidth="1.2"/>
+                      <path d="M3 3h4l2 5-2.5 1.5A11 11 0 0011.5 13.5L13 11l5 2v4a1 1 0 01-1 1C7 18 2 13 2 4a1 1 0 011-1z" stroke="#ffb900" strokeWidth="1.2"/>
                     </svg>
                   ),
                 },
@@ -131,8 +131,8 @@ export default function Contact() {
                   value: "India",
                   icon: (
                     <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none">
-                      <circle cx="10" cy="8" r="3" stroke="#C9A84C" strokeWidth="1.2"/>
-                      <path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#C9A84C" strokeWidth="1.2"/>
+                      <circle cx="10" cy="8" r="3" stroke="#ffb900" strokeWidth="1.2"/>
+                      <path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#ffb900" strokeWidth="1.2"/>
                     </svg>
                   ),
                 },
@@ -156,7 +156,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <div className="lg:col-span-3">
-            <div className="reveal bg-white border border-gray-100 p-8 md:p-10 shadow-[0_4px_60px_rgba(201,168,76,0.06)]" style={{ transitionDelay: "0.1s" }}>
+            <div className="reveal bg-white border border-gray-100 p-8 md:p-10 shadow-[0_4px_60px_rgba(255,185,0,0.06)]" style={{ transitionDelay: "0.1s" }}>
               {/* Gold top border */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold-gradient" style={{ position: "absolute" }} />
 
@@ -164,13 +164,13 @@ export default function Contact() {
                 <div className="text-center py-16">
                   <div className="w-16 h-16 border-2 border-gold-400 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none">
-                      <path d="M5 13L9 17L19 7" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M5 13L9 17L19 7" stroke="#ffb900" strokeWidth="1.5" strokeLinecap="round"/>
                     </svg>
                   </div>
                   <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.8rem" }} className="text-charcoal mb-3">
                     Message Received
                   </h3>
-                  <p className="text-gray-500 text-sm" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+                  <p className="text-gray-700 text-sm" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
                     Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                   </p>
                   <button
@@ -186,7 +186,7 @@ export default function Contact() {
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Name */}
                     <div>
-                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-800 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
                         Full Name *
                       </label>
                       <input
@@ -203,7 +203,7 @@ export default function Contact() {
 
                     {/* Email */}
                     <div>
-                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-800 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
                         Email Address *
                       </label>
                       <input
@@ -222,7 +222,7 @@ export default function Contact() {
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Phone */}
                     <div>
-                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-800 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
                         Phone Number
                       </label>
                       <input
@@ -238,7 +238,7 @@ export default function Contact() {
 
                     {/* Service */}
                     <div>
-                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                      <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-800 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
                         Service Needed
                       </label>
                       <select
@@ -260,7 +260,7 @@ export default function Contact() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-400 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                    <label className="block text-[10px] tracking-[0.2em] uppercase text-gray-800 mb-2" style={{ fontFamily: "var(--font-dm-sans)" }}>
                       Project Details *
                     </label>
                     <textarea
@@ -286,13 +286,13 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full py-4 bg-charcoal text-white text-xs tracking-[0.3em] uppercase font-medium hover:bg-gold-gradient hover:shadow-[0_8px_30px_rgba(201,168,76,0.3)] transition-all duration-400 disabled:opacity-60"
+                    className="w-full py-4 bg-charcoal text-white text-xs tracking-[0.3em] uppercase font-medium hover:bg-gold-gradient hover:shadow-[0_8px_30px_rgba(255,185,0,0.3)] transition-all duration-400 disabled:opacity-60"
                     style={{ fontFamily: "var(--font-dm-sans)" }}
                   >
                     {status === "loading" ? "Sending..." : "Send Message ✦"}
                   </button>
 
-                  <p className="text-[10px] text-gray-400 text-center" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                  <p className="text-[10px] text-gray-800 text-center" style={{ fontFamily: "var(--font-dm-sans)" }}>
                     We typically respond within 24 hours on business days.
                   </p>
                 </form>

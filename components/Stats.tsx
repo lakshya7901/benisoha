@@ -57,7 +57,7 @@ export default function Stats() {
 
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="circuit-bg w-full h-full" style={{ backgroundImage: "linear-gradient(rgba(201,168,76,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.2) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
+        <div className="circuit-bg w-full h-full" style={{ backgroundImage: "linear-gradient(rgba(255,185,0,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,185,0,0.2) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -65,13 +65,13 @@ export default function Stats() {
           {stats.map((stat, i) => (
             <div key={stat.label} className="text-center group">
               <div
-                className="text-5xl md:text-6xl font-light mb-3 text-gold-gradient gold-shimmer"
+                className="text-5xl md:text-6xl font-normal mb-3 text-gold-gradient gold-shimmer"
                 style={{ fontFamily: "var(--font-cormorant)", animationDelay: `${i * 0.5}s` }}
               >
                 <Counter target={stat.value} suffix={stat.suffix} />
               </div>
               <div
-                className="text-xs tracking-[0.2em] uppercase text-gray-400"
+                className="text-xs tracking-[0.2em] uppercase text-gray-300"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
                 {stat.label}

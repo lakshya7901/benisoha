@@ -12,12 +12,12 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <svg viewBox="0 0 36 36" className="w-9 h-9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" stroke="#C9A84C" strokeWidth="1.5" fill="none"/>
-                <polygon points="18,8 28,13 28,23 18,28 8,23 8,13" fill="#C9A84C" opacity="0.15"/>
-                <text x="18" y="22" textAnchor="middle" fill="#C9A84C" fontSize="11" fontFamily="Cormorant Garamond, serif" fontWeight="600">TF</text>
+                <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" stroke="#ffb900" strokeWidth="1.5" fill="none"/>
+                <polygon points="18,8 28,13 28,23 18,28 8,23 8,13" fill="#ffb900" opacity="0.15"/>
+                <text x="18" y="22" textAnchor="middle" fill="#ffb900" fontSize="11" fontFamily="Cormorant Garamond, serif" fontWeight="600">TF</text>
               </svg>
               <div>
-                <div className="text-base font-light tracking-widest" style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.1rem" }}>
+                <div className="text-base font-normal tracking-widest" style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.1rem" }}>
                   TechForge Solutions
                 </div>
                 <div className="text-[9px] tracking-[0.25em] uppercase text-gold-500">
@@ -25,7 +25,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-sm" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+            <p className="text-sm text-gray-300 leading-relaxed max-w-sm" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
               A premier software and technical services company delivering application
               development, automation, and city electrical infrastructure projects with
               quality, safety, and precision.
@@ -42,8 +42,8 @@ export default function Footer() {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-sm text-gray-400 hover:text-gold-400 transition-colors gold-border-animated"
-                    style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}
+                    className="text-sm text-gray-300 hover:text-gold-400 transition-colors gold-border-animated"
+                    style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}
                   >
                     {link}
                   </a>
@@ -66,7 +66,7 @@ export default function Footer() {
                 "Pole Erection",
               ].map((service) => (
                 <li key={service}>
-                  <span className="text-sm text-gray-400 flex items-center gap-2" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 300 }}>
+                  <span className="text-sm text-gray-300 flex items-center gap-2" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
                     <span className="text-gold-700 text-xs">✦</span>
                     {service}
                   </span>
@@ -78,12 +78,12 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-600" style={{ fontFamily: "var(--font-dm-sans)" }}>
+          <p className="text-xs text-gray-300" style={{ fontFamily: "var(--font-dm-sans)" }}>
             © {year} TechForge Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-gold-800 text-xs">✦</span>
-            <span className="text-xs text-gray-600" style={{ fontFamily: "var(--font-dm-sans)" }}>
+            <span className="text-xs text-gray-300" style={{ fontFamily: "var(--font-dm-sans)" }}>
               Quality · Safety · Timely Execution
             </span>
             <span className="text-gold-800 text-xs">✦</span>

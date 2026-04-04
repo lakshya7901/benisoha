@@ -10,16 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         gold: {
-          50:  "#fdf9ed",
-          100: "#f9edcc",
-          200: "#f2d98a",
-          300: "#e8c252",
-          400: "#d4a82a",
-          500: "#C9A84C",
-          600: "#b8860b",
-          700: "#966e0a",
-          800: "#7a5908",
-          900: "#5c4206",
+          50:  "#fff8e1",
+          100: "#ffecb3",
+          200: "#ffe082",
+          300: "#ffd54f",
+          400: "#ffca28",
+          500: "#ffb900",
+          600: "#e6a700",
+          700: "#cc9400",
+          800: "#a37700",
+          900: "#7a5900",
         },
         cream: "#FAFAF5",
         charcoal: "#1A1A1A",
@@ -29,8 +29,8 @@ const config: Config = {
         body: ["var(--font-dm-sans)", "sans-serif"],
       },
       backgroundImage: {
-        "gold-gradient": "linear-gradient(135deg, #C9A84C 0%, #E8C252 50%, #C9A84C 100%)",
-        "hero-pattern": "radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.05) 0%, transparent 50%)",
+        "gold-gradient": "linear-gradient(135deg, #ffb900 0%, #ffca28 50%, #ffb900 100%)",
+        "hero-pattern": "radial-gradient(ellipse at 20% 50%, rgba(255,185,0,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(255,185,0,0.05) 0%, transparent 50%)",
       },
       animation: {
         "fade-up": "fadeUp 0.8s ease forwards",

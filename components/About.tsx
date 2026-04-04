@@ -9,7 +9,7 @@ const pillars = [
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
         <path d="M20 4L23.5 14.5H34.5L26 21.5L29.5 32L20 25L10.5 32L14 21.5L5.5 14.5H16.5L20 4Z"
-          stroke="#ffb900" strokeWidth="1.8" fill="rgba(255,185,0,0.15)" />
+          stroke="#FFFC00" strokeWidth="1.8" fill="rgba(255,252,0,0.15)" />
       </svg>
     ),
   },
@@ -19,8 +19,8 @@ const pillars = [
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
         <path d="M20 4L34 10V22C34 29 27 35 20 37C13 35 6 29 6 22V10L20 4Z"
-          stroke="#ffb900" strokeWidth="1.8" fill="rgba(255,185,0,0.15)" />
-        <path d="M14 20L18 24L26 16" stroke="#ffb900" strokeWidth="2" strokeLinecap="round" />
+          stroke="#FFFC00" strokeWidth="1.8" fill="rgba(255,252,0,0.15)" />
+        <path d="M14 20L18 24L26 16" stroke="#FFFC00" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -29,8 +29,8 @@ const pillars = [
     desc: "We respect deadlines. Project timelines are planned carefully and monitored throughout delivery.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
-        <circle cx="20" cy="20" r="15" stroke="#ffb900" strokeWidth="1.8" fill="rgba(255,185,0,0.15)" />
-        <path d="M20 11V20L26 24" stroke="#ffb900" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="20" cy="20" r="15" stroke="#FFFC00" strokeWidth="1.8" fill="rgba(255,252,0,0.15)" />
+        <path d="M20 11V20L26 24" stroke="#FFFC00" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
   },

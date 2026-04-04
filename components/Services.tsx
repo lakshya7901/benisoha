@@ -107,7 +107,7 @@ export default function Services() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
           <svg viewBox="0 0 32 32" className="w-8 h-8" fill="none">
-            <path d="M16 2L18 10H26L20 15L22 23L16 18L10 23L12 15L6 10H14L16 2Z" fill="#ffb900" />
+            <path d="M16 2L18 10H26L20 15L22 23L16 18L10 23L12 15L6 10H14L16 2Z" fill="#FFFC00" />
           </svg>
         </div>
       </div>

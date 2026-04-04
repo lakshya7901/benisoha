@@ -4,12 +4,12 @@
 
 :root {
   --gold: #FFFC00;
-  --gold-dark: #e6a700;
-  --gold-deeper: #cc9400;
+  --gold-dark: #e6e300;
+  --gold-deeper: #ccca00;
   --white: #ffffff;
   --charcoal: #1A1A1A;
   --charcoal-soft: #2d2d2d;
-  --brown-dark: #3D2800;
+  --brown-dark: #3D3300;
   --font-cormorant: 'Cormorant Garamond', Georgia, serif;
   --font-dm-sans: 'DM Sans', sans-serif;
 }
@@ -25,23 +25,11 @@ body {
   font-weight: 500;
 }
 
-/* Italic accent — white on gold bg */
-.text-accent-italic {
-  color: #ffffff;
-}
-
-/* Dark italic variant for white sections */
-.text-accent-italic-dark {
-  color: var(--brown-dark);
-}
-
-/* Subtle dot pattern on gold */
 .dot-pattern {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.09) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
-/* Diagonal line pattern */
 .line-pattern {
   background-image: repeating-linear-gradient(
     -45deg,
@@ -52,7 +40,6 @@ body {
   );
 }
 
-/* Section reveal */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -63,7 +50,6 @@ body {
   transform: translateY(0);
 }
 
-/* Nav link — works on gold bg */
 .nav-link {
   position: relative;
   font-family: var(--font-dm-sans);
@@ -84,50 +70,24 @@ body {
 }
 .nav-link:hover::after { width: 100%; }
 
-/* Nav link white variant (scrolled on dark nav) */
-.nav-link-white {
-  color: #ffffff;
-}
-.nav-link-white::after {
-  background: #ffffff;
-}
-
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--gold-dark); }
 ::-webkit-scrollbar-thumb { background: var(--charcoal); border-radius: 3px; }
 
-/* Card fade-up keyframe */
 @keyframes cardFadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Float animation */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-12px); }
 }
 .animate-float { animation: float 6s ease-in-out infinite; }
 
-/* Spin slow */
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
-.animate-spin-slow  { animation: spin-slow 20s linear infinite; }
-.animate-spin-rev   { animation: spin-slow 15s linear infinite reverse; }
-
-/* Shimmer on dark bg */
-@keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position:  200% center; }
-}
-.white-shimmer {
-  background: linear-gradient(90deg, #fff, #ffecb3, #fff, #ffe082, #fff);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 5s linear infinite;
-}
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+.animate-spin-rev  { animation: spin-slow 15s linear infinite reverse; }

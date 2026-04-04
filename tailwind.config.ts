@@ -10,20 +10,20 @@ const config: Config = {
     extend: {
       colors: {
         gold: {
-          50:  "#fff8e1",
-          100: "#ffecb3",
-          200: "#ffe082",
-          300: "#ffd54f",
-          400: "#ffca28",
-          500: "#ffb900",
-          600: "#e6a700",
-          700: "#cc9400",
-          800: "#a37700",
-          900: "#7a5900",
+          50:  "#fffee8",
+          100: "#fffde0",
+          200: "#fffb80",
+          300: "#FFFC00",
+          400: "#FFFC00",
+          500: "#FFFC00",
+          600: "#e6e300",
+          700: "#ccca00",
+          800: "#a3a100",
+          900: "#7a7800",
         },
         charcoal: "#1A1A1A",
         "charcoal-soft": "#2d2d2d",
-        "brown-dark": "#3D2800",
+        "brown-dark": "#3D3300",
       },
       fontFamily: {
         display: ["var(--font-cormorant)", "Georgia", "serif"],
@@ -31,6 +31,7 @@ const config: Config = {
       },
       backgroundImage: {
         "dark-gradient": "linear-gradient(135deg, #1A1A1A 0%, #2d2d2d 100%)",
+        "gold-gradient": "linear-gradient(135deg, #FFFC00 0%, #fffb80 50%, #FFFC00 100%)",
       },
       animation: {
         "spin-slow": "spin 20s linear infinite",

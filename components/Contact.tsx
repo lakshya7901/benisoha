@@ -81,11 +81,11 @@ export default function Contact() {
             <div className="reveal space-y-6" style={{ transitionDelay: "0.2s" }}>
               {[
                 { label: "Email", value: "hello@benisohafusion.com",
-                  icon: <path d="M2 5L10 11L18 5M2 5H18V15H2V5Z" stroke="#ffb900" strokeWidth="1.5"/> },
+                  icon: <path d="M2 5L10 11L18 5M2 5H18V15H2V5Z" stroke="#FFFC00" strokeWidth="1.5"/> },
                 { label: "Phone", value: "+91 98765 43210",
-                  icon: <path d="M3 3h4l2 5-2.5 1.5A11 11 0 0011.5 13.5L13 11l5 2v4a1 1 0 01-1 1C7 18 2 13 2 4a1 1 0 011-1z" stroke="#ffb900" strokeWidth="1.5"/> },
+                  icon: <path d="M3 3h4l2 5-2.5 1.5A11 11 0 0011.5 13.5L13 11l5 2v4a1 1 0 01-1 1C7 18 2 13 2 4a1 1 0 011-1z" stroke="#FFFC00" strokeWidth="1.5"/> },
                 { label: "Location", value: "India",
-                  icon: <><circle cx="10" cy="8" r="3" stroke="#ffb900" strokeWidth="1.5"/><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#ffb900" strokeWidth="1.5"/></> },
+                  icon: <><circle cx="10" cy="8" r="3" stroke="#FFFC00" strokeWidth="1.5"/><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#FFFC00" strokeWidth="1.5"/></> },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
                   <div className="w-9 h-9 border-2 border-gold-500 flex items-center justify-center flex-shrink-0">
@@ -109,7 +109,7 @@ export default function Contact() {
                 <div className="text-center py-16">
                   <div className="w-16 h-16 bg-charcoal rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg viewBox="0 0 24 24" className="w-8 h-8" fill="none">
-                      <path d="M5 13L9 17L19 7" stroke="#ffb900" strokeWidth="2" strokeLinecap="round"/>
+                      <path d="M5 13L9 17L19 7" stroke="#FFFC00" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
                   <h3 className="text-charcoal mb-3 font-semibold"

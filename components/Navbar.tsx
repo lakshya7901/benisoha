@@ -30,11 +30,11 @@ export default function Navbar() {
           <div className="w-9 h-9">
             <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <polygon points="18,2 34,10 34,26 18,34 2,26 2,10"
-                stroke={scrolled ? "#ffb900" : "#1A1A1A"} strokeWidth="1.5" fill="none" />
+                stroke={scrolled ? "#FFFC00" : "#1A1A1A"} strokeWidth="1.5" fill="none" />
               <polygon points="18,8 28,13 28,23 18,28 8,23 8,13"
-                fill={scrolled ? "#ffb900" : "#1A1A1A"} opacity="0.15" />
+                fill={scrolled ? "#FFFC00" : "#1A1A1A"} opacity="0.15" />
               <text x="18" y="22" textAnchor="middle"
-                fill={scrolled ? "#ffb900" : "#1A1A1A"}
+                fill={scrolled ? "#FFFC00" : "#1A1A1A"}
                 fontSize="10" fontFamily="Cormorant Garamond, serif" fontWeight="700">BF</text>
             </svg>
           </div>

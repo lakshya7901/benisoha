@@ -52,7 +52,7 @@ export default function Stats() {
               <div className="text-5xl md:text-6xl font-light mb-3 text-charcoal white-shimmer"
                 style={{
                   fontFamily: "var(--font-cormorant)",
-                  background: "linear-gradient(135deg, #1A1A1A, #ffb900, #1A1A1A)",
+                  background: "linear-gradient(135deg, #1A1A1A, #FFFC00, #1A1A1A)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",

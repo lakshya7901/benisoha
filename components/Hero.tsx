@@ -97,7 +97,7 @@ export default function Hero() {
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-10">
                 <div className="w-20 h-20 bg-charcoal rounded-full flex items-center justify-center mb-4 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
                   <svg viewBox="0 0 40 40" className="w-10 h-10" fill="none">
-                    <polygon points="20,4 24,16 20,16 24,36 16,20 20,20" fill="#ffb900" />
+                    <polygon points="20,4 24,16 20,16 24,36 16,20 20,20" fill="#FFFC00" />
                   </svg>
                 </div>
                 <p className="text-xs tracking-[0.25em] uppercase text-charcoal font-bold"

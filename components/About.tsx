@@ -7,8 +7,9 @@ const pillars = [
     title: "Quality Work",
     desc: "Every project is executed with meticulous attention to detail, meeting the highest industry standards.",
     icon: (
-      <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 4L23.5 14.5H34.5L26 21.5L29.5 32L20 25L10.5 32L14 21.5L5.5 14.5H16.5L20 4Z" stroke="#ffb900" strokeWidth="1.2" fill="rgba(255,185,0,0.1)"/>
+      <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
+        <path d="M20 4L23.5 14.5H34.5L26 21.5L29.5 32L20 25L10.5 32L14 21.5L5.5 14.5H16.5L20 4Z"
+          stroke="#ffb900" strokeWidth="1.8" fill="rgba(255,185,0,0.15)" />
       </svg>
     ),
   },
@@ -16,9 +17,10 @@ const pillars = [
     title: "Safety First",
     desc: "We adhere to strict safety protocols across all operations — from coding practices to on-site electrical work.",
     icon: (
-      <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 4L34 10V22C34 29 27 35 20 37C13 35 6 29 6 22V10L20 4Z" stroke="#ffb900" strokeWidth="1.2" fill="rgba(255,185,0,0.1)"/>
-        <path d="M14 20L18 24L26 16" stroke="#ffb900" strokeWidth="1.5" strokeLinecap="round"/>
+      <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
+        <path d="M20 4L34 10V22C34 29 27 35 20 37C13 35 6 29 6 22V10L20 4Z"
+          stroke="#ffb900" strokeWidth="1.8" fill="rgba(255,185,0,0.15)" />
+        <path d="M14 20L18 24L26 16" stroke="#ffb900" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -26,9 +28,9 @@ const pillars = [
     title: "Timely Execution",
     desc: "We respect deadlines. Project timelines are planned carefully and monitored throughout delivery.",
     icon: (
-      <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="15" stroke="#ffb900" strokeWidth="1.2" fill="rgba(255,185,0,0.1)"/>
-        <path d="M20 11V20L26 24" stroke="#ffb900" strokeWidth="1.5" strokeLinecap="round"/>
+      <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
+        <circle cx="20" cy="20" r="15" stroke="#ffb900" strokeWidth="1.8" fill="rgba(255,185,0,0.15)" />
+        <path d="M20 11V20L26 24" stroke="#ffb900" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -55,83 +57,71 @@ export default function About() {
   }, []);
 
   return (
+    /* White section — contrast against gold sections above/below */
     <section id="about" ref={sectionRef} className="py-28 bg-white relative overflow-hidden">
-      {/* Subtle background accent */}
-      <div className="absolute right-0 top-0 w-1/3 h-full bg-cream opacity-50" />
-      <div className="absolute right-1/3 top-0 bottom-0 w-[1px] bg-gold-100" />
+      {/* Gold left stripe */}
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold-500" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Section label */}
+        {/* Label */}
         <div className="reveal flex items-center gap-3 mb-16">
-          <span className="w-8 h-[1px] bg-gold-500" />
-          <span className="text-xs tracking-[0.3em] uppercase text-gold-600 font-medium" style={{ fontFamily: "var(--font-dm-sans)" }}>
-            Who We Are
-          </span>
+          <span className="w-8 h-[2px] bg-gold-500" />
+          <span className="text-xs tracking-[0.3em] uppercase text-gold-600 font-bold"
+            style={{ fontFamily: "var(--font-dm-sans)" }}>Who We Are</span>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left: Main text */}
+          {/* Left */}
           <div>
-            <h2
-              className="reveal mb-8 leading-tight"
-              style={{
-                fontFamily: "var(--font-cormorant)",
-                fontSize: "clamp(2.2rem, 4vw, 3.5rem)",
-                fontWeight: 500,
-                color: "#1A1A1A",
-              }}
-            >
-              A Dual-Force Company — <br />
-              <span className="italic text-gold-gradient">Software & Infrastructure</span>
+            <h2 className="reveal mb-8 leading-tight"
+              style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 500, color: "#1A1A1A" }}>
+              A Dual-Force Company —{" "}
+              <br /><span className="italic font-light text-brown-dark">Software &amp; Infrastructure</span>
             </h2>
 
-            <p className="reveal text-gray-800 leading-relaxed mb-6 text-base" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500, transitionDelay: "0.1s" }}>
+            <p className="reveal text-gray-800 leading-relaxed mb-6 text-base font-medium"
+              style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.1s" }}>
               We are a software and technical services company delivering cutting-edge
               application development, intelligent automation solutions, and comprehensive
-              digital support. Our engineering team brings together deep technology expertise
-              with a passion for elegant, scalable solutions.
+              digital support. Our engineering team brings deep technology expertise with a
+              passion for elegant, scalable solutions.
             </p>
 
-            <p className="reveal text-gray-800 leading-relaxed mb-10 text-base" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500, transitionDelay: "0.2s" }}>
-              Beyond digital, we are also trusted by the Electricity Department for city
-              electrical infrastructure — including power line installation and pole erection
-              projects. We bring the same precision and rigor from software engineering to
-              physical infrastructure delivery.
+            <p className="reveal text-gray-700 leading-relaxed mb-10 text-base font-medium"
+              style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.2s" }}>
+              Beyond digital, we are also trusted by the Electricity Department for
+              city-wide electrical infrastructure — power line installation and pole
+              erection projects — bringing the same precision from software to physical delivery.
             </p>
 
-            {/* Gold divider line */}
+            {/* Divider */}
             <div className="reveal flex items-center gap-4 mb-8" style={{ transitionDelay: "0.25s" }}>
-              <div className="h-[1px] flex-1 bg-gradient-to-r from-gold-400 to-transparent" />
-              <span className="text-gold-400 text-xs">✦</span>
+              <div className="h-[2px] w-20 bg-gold-500" />
+              <div className="h-[1px] flex-1 bg-gray-200" />
             </div>
 
-            <blockquote
-              className="reveal border-l-2 border-gold-400 pl-6 text-lg italic text-gray-700"
-              style={{ fontFamily: "var(--font-cormorant)", fontWeight: 500, transitionDelay: "0.3s" }}
-            >
-              "We don't just build systems — we build the infrastructure that powers communities."
+            <blockquote className="reveal border-l-4 border-gold-500 pl-6 text-xl italic text-charcoal"
+              style={{ fontFamily: "var(--font-cormorant)", fontWeight: 500, transitionDelay: "0.3s" }}>
+              &ldquo;We don&apos;t just build systems — we build the infrastructure that powers communities.&rdquo;
             </blockquote>
           </div>
 
           {/* Right: Pillars */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             {pillars.map((pillar, i) => (
-              <div
-                key={pillar.title}
-                className="reveal flex gap-6 group"
-                style={{ transitionDelay: `${0.2 + i * 0.15}s` }}
-              >
-                <div className="flex-shrink-0 w-14 h-14 border border-gold-200 flex items-center justify-center group-hover:border-gold-400 group-hover:bg-gold-50 transition-all duration-300">
+              <div key={pillar.title} className="reveal flex gap-5 group"
+                style={{ transitionDelay: `${0.2 + i * 0.15}s` }}>
+                <div className="flex-shrink-0 w-14 h-14 bg-gold-500 flex items-center justify-center
+                  group-hover:bg-charcoal transition-colors duration-300">
                   {pillar.icon}
                 </div>
                 <div>
-                  <h3
-                    className="text-lg font-medium mb-2 text-charcoal group-hover:text-gold-700 transition-colors"
-                    style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.2rem" }}
-                  >
+                  <h3 className="text-lg font-bold mb-1.5 text-charcoal"
+                    style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.25rem" }}>
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 500 }}>
+                  <p className="text-sm text-gray-700 leading-relaxed font-medium"
+                    style={{ fontFamily: "var(--font-dm-sans)" }}>
                     {pillar.desc}
                   </p>
                 </div>

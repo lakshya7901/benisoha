@@ -41,12 +41,6 @@ const projects = [
   },
 ];
 
-const categoryColors: Record<string, string> = {
-  Software: "bg-amber-50 text-amber-800",
-  Automation: "bg-yellow-50 text-yellow-800",
-  Infrastructure: "bg-stone-100 text-stone-700",
-};
-
 const categories = ["All", "Software", "Automation", "Infrastructure"];
 
 export default function Projects() {
@@ -55,137 +49,95 @@ export default function Projects() {
   const [sectionVisible, setSectionVisible] = useState(false);
   const [cardKey, setCardKey] = useState(0);
 
-  const filtered =
-    filter === "All" ? projects : projects.filter((p) => p.category === filter);
+  const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
-  // Trigger section visibility once on mount via IntersectionObserver
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setSectionVisible(true);
-          }
-        });
-      },
+      ([entry]) => { if (entry.isIntersecting) setSectionVisible(true); },
       { threshold: 0.1 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
-  // When filter changes, bump cardKey so cards remount and re-animate
   const handleFilter = (cat: string) => {
     setFilter(cat);
     setCardKey((k) => k + 1);
   };
 
   return (
-    <section id="projects" ref={sectionRef} className="py-28 bg-white relative">
+    /* Gold background section */
+    <section id="projects" ref={sectionRef} className="py-28 bg-gold-500 dot-pattern relative">
       <div className="max-w-7xl mx-auto px-6">
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
-            <div
-              className={`flex items-center gap-3 mb-4 transition-all duration-700 ${
-                sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-            >
-              <span className="w-8 h-[1px] bg-gold-500" />
-              <span
-                className="text-xs tracking-[0.3em] uppercase text-gold-600 font-semibold"
-                style={{ fontFamily: "var(--font-dm-sans)" }}
-              >
-                Our Work
-              </span>
+            <div className={`flex items-center gap-3 mb-4 transition-all duration-700 ${sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+              <span className="w-8 h-[2px] bg-charcoal" />
+              <span className="text-xs tracking-[0.3em] uppercase text-charcoal font-bold"
+                style={{ fontFamily: "var(--font-dm-sans)" }}>Our Work</span>
             </div>
-            <h2
-              className={`transition-all duration-700 delay-100 ${
-                sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{
-                fontFamily: "var(--font-cormorant)",
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
-                fontWeight: 500,
-              }}
-            >
-              Featured <span className="italic text-gold-gradient">Projects</span>
+            <h2 className={`transition-all duration-700 delay-100 ${sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 600, color: "#1A1A1A" }}>
+              Featured{" "}
+              <span className="italic font-light text-white" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}>Projects</span>
             </h2>
           </div>
 
-          {/* Filter tabs */}
-          <div
-            className={`flex flex-wrap gap-2 transition-all duration-700 delay-200 ${
-              sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
+          {/* Filter */}
+          <div className={`flex flex-wrap gap-2 transition-all duration-700 delay-200 ${sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => handleFilter(cat)}
-                className={`px-4 py-2 text-xs tracking-widest uppercase font-semibold transition-all duration-300 ${
+              <button key={cat} onClick={() => handleFilter(cat)}
+                className={`px-4 py-2 text-xs tracking-widest uppercase font-bold transition-all duration-300 ${
                   filter === cat
-                    ? "bg-gold-500 text-white shadow-[0_4px_20px_rgba(255,185,0,0.4)]"
-                    : "border border-gray-300 text-gray-600 hover:border-gold-400 hover:text-gold-700"
+                    ? "bg-charcoal text-white shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                    : "border-2 border-charcoal/40 text-charcoal hover:border-charcoal hover:bg-charcoal/10"
                 }`}
-                style={{ fontFamily: "var(--font-dm-sans)" }}
-              >
+                style={{ fontFamily: "var(--font-dm-sans)" }}>
                 {cat}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Project Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cards — white on gold */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((project, i) => (
-            <div
-              key={`${cardKey}-${project.title}`}
-              className="group border border-gray-200 hover:border-gold-300 hover:shadow-[0_12px_40px_rgba(255,185,0,0.12)] transition-all duration-500 bg-white"
-              style={{
-                animation: `cardFadeUp 0.5s ease forwards`,
-                animationDelay: `${i * 0.07}s`,
-                opacity: 0,
-              }}
-            >
-              {/* Top accent bar */}
-              <div className="h-[3px] bg-gradient-to-r from-gold-400 via-gold-500 to-transparent" />
+            <div key={`${cardKey}-${project.title}`}
+              className="group bg-white hover:shadow-[0_16px_50px_rgba(0,0,0,0.18)] transition-all duration-400"
+              style={{ animation: "cardFadeUp 0.5s ease forwards", animationDelay: `${i * 0.07}s`, opacity: 0 }}>
+
+              {/* Top bar color by category */}
+              <div className={`h-1 ${
+                project.category === "Software" ? "bg-charcoal" :
+                project.category === "Automation" ? "bg-gold-600" : "bg-charcoal-soft"
+              }`} />
 
               <div className="p-6">
-                {/* Category badge */}
-                <span
-                  className={`inline-block px-3 py-1 text-[11px] tracking-widest uppercase rounded-sm mb-4 font-semibold ${categoryColors[project.category]}`}
-                  style={{ fontFamily: "var(--font-dm-sans)" }}
-                >
+                <span className={`inline-block px-3 py-1 text-[10px] tracking-widest uppercase rounded-sm mb-4 font-bold ${
+                  project.category === "Software"   ? "bg-charcoal text-white" :
+                  project.category === "Automation" ? "bg-gold-500 text-charcoal" :
+                  "bg-gray-100 text-gray-700"
+                }`} style={{ fontFamily: "var(--font-dm-sans)" }}>
                   {project.category}
                 </span>
 
-                <h3
-                  className="mb-3 text-charcoal group-hover:text-gold-700 transition-colors leading-snug"
-                  style={{
-                    fontFamily: "var(--font-cormorant)",
-                    fontSize: "1.2rem",
-                    fontWeight: 600,
-                  }}
-                >
+                <h3 className="mb-3 text-charcoal group-hover:text-gold-700 transition-colors leading-snug font-bold"
+                  style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.2rem" }}>
                   {project.title}
                 </h3>
 
-                <p
-                  className="text-sm text-gray-700 leading-relaxed mb-6 font-medium"
-                  style={{ fontFamily: "var(--font-dm-sans)" }}
-                >
+                <p className="text-sm text-gray-700 leading-relaxed mb-6 font-medium"
+                  style={{ fontFamily: "var(--font-dm-sans)" }}>
                   {project.desc}
                 </p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[11px] tracking-wider border border-gold-300 text-gold-700 px-2 py-0.5 font-medium"
-                      style={{ fontFamily: "var(--font-dm-sans)" }}
-                    >
+                    <span key={tag}
+                      className="text-[10px] tracking-wider border-2 border-charcoal/20 text-charcoal px-2 py-0.5 font-semibold"
+                      style={{ fontFamily: "var(--font-dm-sans)" }}>
                       {tag}
                     </span>
                   ))}
@@ -196,7 +148,6 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Keyframe injected inline */}
       <style>{`
         @keyframes cardFadeUp {
           from { opacity: 0; transform: translateY(24px); }

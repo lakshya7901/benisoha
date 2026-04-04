@@ -110,7 +110,7 @@ export default function Contact() {
               {[
                 {
                   label: "Email",
-                  value: "hello@techforgesolutions.com",
+                  value: "benisoharj@gmail.com",
                   icon: (
                     <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none">
                       <path d="M2 5L10 11L18 5M2 5H18V15H2V5Z" stroke="#ffb900" strokeWidth="1.2"/>
@@ -118,8 +118,8 @@ export default function Contact() {
                   ),
                 },
                 {
-                  label: "Phone",
-                  value: "+91 98765 43210",
+                  label: "Telegram",
+                  value: "@cmasterpvt",
                   icon: (
                     <svg viewBox="0 0 20 20" className="w-4 h-4" fill="none">
                       <path d="M3 3h4l2 5-2.5 1.5A11 11 0 0011.5 13.5L13 11l5 2v4a1 1 0 01-1 1C7 18 2 13 2 4a1 1 0 011-1z" stroke="#ffb900" strokeWidth="1.2"/>

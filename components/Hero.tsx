@@ -121,13 +121,13 @@ export default function Hero() {
                     className="text-[9px] tracking-widest uppercase text-white/60"
                     style={{ fontFamily: "var(--font-dm-sans)", lineHeight: 1 }}
                   >
-                    Get it on
+                    Explore
                   </div>
                   <div
                     className="text-sm font-bold text-white"
                     style={{ fontFamily: "var(--font-dm-sans)", lineHeight: 1.2 }}
                   >
-                    Google Play
+                    Our Applications
                   </div>
                 </div>
               </a>

@@ -1,7 +1,7 @@
 export default function FloatingTelegram() {
   return (
     <a
-      href="https://t.me/benisohafusion"
+      href="https://t.me/cmasterpvt"
       target="_blank"
       rel="noopener noreferrer"
       className="float-tg"

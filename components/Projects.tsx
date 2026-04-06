@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
-    category: "Software",
+    category: "Application",
     title: "Enterprise Resource Management System",
     desc: "A full-stack ERP platform for a manufacturing firm — covering inventory, HR, and financial reporting with real-time dashboards.",
     tags: ["React", "Node.js", "PostgreSQL"],
@@ -22,7 +22,7 @@ const projects = [
     tags: ["HT Lines", "Pole Erection", "Govt. Project"],
   },
   {
-    category: "Software",
+    category: "Application",
     title: "Customer Support Digital Portal",
     desc: "A multi-channel support portal with ticketing, live chat integration, and analytics for a regional service provider.",
     tags: ["Next.js", "TypeScript", "REST API"],
@@ -41,7 +41,7 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Software", "Automation", "Infrastructure"];
+const categories = ["All", "Application", "Automation", "Infrastructure"];
 
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -110,13 +110,13 @@ export default function Projects() {
 
               {/* Top bar color by category */}
               <div className={`h-1 ${
-                project.category === "Software" ? "bg-charcoal" :
+                project.category === "Application" ? "bg-charcoal" :
                 project.category === "Automation" ? "bg-gold-600" : "bg-charcoal-soft"
               }`} />
 
               <div className="p-6">
                 <span className={`inline-block px-3 py-1 text-[10px] tracking-widest uppercase rounded-sm mb-4 font-bold ${
-                  project.category === "Software"   ? "bg-charcoal text-white" :
+                  project.category === "Application" ? "bg-charcoal text-white" :
                   project.category === "Automation" ? "bg-gold-500 text-charcoal" :
                   "bg-gray-100 text-gray-700"
                 }`} style={{ fontFamily: "var(--font-dm-sans)" }}>

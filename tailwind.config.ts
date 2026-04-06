@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,16 +9,16 @@ const config: Config = {
     extend: {
       colors: {
         gold: {
-          50:  "#fffee8",
-          100: "#fffde0",
-          200: "#fffb80",
-          300: "#FFFC00",
-          400: "#FFFC00",
-          500: "#FFFC00",
-          600: "#e6e300",
-          700: "#ccca00",
-          800: "#a3a100",
-          900: "#7a7800",
+          50:  "#fefbe8",
+          100: "#fdf6c0",
+          200: "#fced6e",
+          300: "#f5d60c",
+          400: "#f5d60c",
+          500: "#f5d60c",
+          600: "#dcc40a",
+          700: "#c4bc09",
+          800: "#9a9808",
+          900: "#727006",
         },
         charcoal: "#1A1A1A",
         "charcoal-soft": "#2d2d2d",
@@ -29,14 +28,8 @@ const config: Config = {
         display: ["var(--font-cormorant)", "Georgia", "serif"],
         body:    ["var(--font-dm-sans)",   "sans-serif"],
       },
-      backgroundImage: {
-        "dark-gradient": "linear-gradient(135deg, #1A1A1A 0%, #2d2d2d 100%)",
-        "gold-gradient": "linear-gradient(135deg, #FFFC00 0%, #fffb80 50%, #FFFC00 100%)",
-      },
-      animation: {
-        "spin-slow": "spin 20s linear infinite",
-        "spin-rev":  "spin 15s linear infinite reverse",
-        float:       "float 6s ease-in-out infinite",
+      screens: {
+        xs: "375px",
       },
     },
   },

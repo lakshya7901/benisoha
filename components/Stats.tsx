@@ -41,7 +41,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 export default function Stats() {
   return (
     /* White band — strong contrast between gold sections */
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500" />
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gold-500" />
 
@@ -49,10 +49,10 @@ export default function Stats() {
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-200">
           {stats.map((stat, i) => (
             <div key={stat.label} className="text-center py-8 px-4 group">
-              <div className="text-5xl md:text-6xl font-light mb-3 text-charcoal white-shimmer"
+              <div className="text-4xl sm:text-5xl md:text-6xl font-light mb-3 text-charcoal white-shimmer"
                 style={{
                   fontFamily: "var(--font-cormorant)",
-                  background: "linear-gradient(135deg, #1A1A1A, #FFFC00, #1A1A1A)",
+                  background: "linear-gradient(135deg, #1A1A1A, #f5d60c, #1A1A1A)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",

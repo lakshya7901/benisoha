@@ -63,7 +63,7 @@ export default function Services() {
       <div className="grid lg:grid-cols-2 min-h-[700px]">
 
         {/* Software — gold background */}
-        <div className="bg-gold-500 dot-pattern py-24 px-8 lg:px-16">
+        <div className="bg-gold-500 dot-pattern py-14 sm:py-24 px-4 sm:px-8 lg:px-16">
           <div className="reveal flex items-center gap-3 mb-4">
             <span className="w-6 h-[2px] bg-charcoal" />
             <span className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold"
@@ -84,7 +84,7 @@ export default function Services() {
         </div>
 
         {/* Infrastructure — dark background */}
-        <div className="bg-charcoal line-pattern py-24 px-8 lg:px-16">
+        <div className="bg-charcoal line-pattern py-14 sm:py-24 px-4 sm:px-8 lg:px-16">
           <div className="reveal flex items-center gap-3 mb-4">
             <span className="w-6 h-[2px] bg-gold-500" />
             <span className="text-[10px] tracking-[0.3em] uppercase text-gold-400 font-bold"
@@ -107,7 +107,7 @@ export default function Services() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
           <svg viewBox="0 0 32 32" className="w-8 h-8" fill="none">
-            <path d="M16 2L18 10H26L20 15L22 23L16 18L10 23L12 15L6 10H14L16 2Z" fill="#FFFC00" />
+            <path d="M16 2L18 10H26L20 15L22 23L16 18L10 23L12 15L6 10H14L16 2Z" fill="#f5d60c" />
           </svg>
         </div>
       </div>

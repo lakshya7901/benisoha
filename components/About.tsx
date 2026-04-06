@@ -9,7 +9,7 @@ const pillars = [
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
         <path d="M20 4L23.5 14.5H34.5L26 21.5L29.5 32L20 25L10.5 32L14 21.5L5.5 14.5H16.5L20 4Z"
-          stroke="#FFFC00" strokeWidth="1.8" fill="rgba(255,252,0,0.15)" />
+          stroke="#f5d60c" strokeWidth="1.8" fill="rgba(245,214,12,0.15)" />
       </svg>
     ),
   },
@@ -19,8 +19,8 @@ const pillars = [
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
         <path d="M20 4L34 10V22C34 29 27 35 20 37C13 35 6 29 6 22V10L20 4Z"
-          stroke="#FFFC00" strokeWidth="1.8" fill="rgba(255,252,0,0.15)" />
-        <path d="M14 20L18 24L26 16" stroke="#FFFC00" strokeWidth="2" strokeLinecap="round" />
+          stroke="#f5d60c" strokeWidth="1.8" fill="rgba(245,214,12,0.15)" />
+        <path d="M14 20L18 24L26 16" stroke="#f5d60c" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -29,8 +29,8 @@ const pillars = [
     desc: "We respect deadlines. Project timelines are planned carefully and monitored throughout delivery.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
-        <circle cx="20" cy="20" r="15" stroke="#FFFC00" strokeWidth="1.8" fill="rgba(255,252,0,0.15)" />
-        <path d="M20 11V20L26 24" stroke="#FFFC00" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="20" cy="20" r="15" stroke="#f5d60c" strokeWidth="1.8" fill="rgba(245,214,12,0.15)" />
+        <path d="M20 11V20L26 24" stroke="#f5d60c" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -58,19 +58,19 @@ export default function About() {
 
   return (
     /* White section — contrast against gold sections above/below */
-    <section id="about" ref={sectionRef} className="py-28 bg-white relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-16 sm:py-28 bg-white relative overflow-hidden">
       {/* Gold left stripe */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gold-500" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Label */}
-        <div className="reveal flex items-center gap-3 mb-16">
+        <div className="reveal flex items-center gap-3 mb-10 sm:mb-16">
           <span className="w-8 h-[2px] bg-gold-500" />
           <span className="text-xs tracking-[0.3em] uppercase text-gold-600 font-bold"
             style={{ fontFamily: "var(--font-dm-sans)" }}>Who We Are</span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-start">
           {/* Left */}
           <div>
             <h2 className="reveal mb-8 leading-tight"

@@ -127,7 +127,7 @@ export default function Hero() {
                     className="text-sm font-bold text-white"
                     style={{ fontFamily: "var(--font-dm-sans)", lineHeight: 1.2 }}
                   >
-                    Our Applications
+                    All Applications
                   </div>
                 </div>
               </a>

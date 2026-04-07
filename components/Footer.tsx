@@ -131,7 +131,29 @@ export default function Footer() {
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold mb-4 sm:mb-5"
               style={{ fontFamily: "var(--font-dm-sans)" }}>Quick Links</h4>
             <ul className="space-y-2.5 sm:space-y-3">
-              {["About", "Services", "Projects", "Contact", "Application"].map((link) => (
+              {["About", "Services"].map((link) => (
+                <li key={link}>
+                  <a href={`#${link.toLowerCase()}`}
+                    className="text-sm text-charcoal/80 hover:text-charcoal font-semibold transition-colors hover:underline underline-offset-2 touch-target flex items-center"
+                    style={{ fontFamily: "var(--font-dm-sans)" }}>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <ul className="space-y-2.5 sm:space-y-3">
+              {["Applications"].map((link) => (
+                <li key={link}>
+                  <a href={`/${link.toLowerCase()}`}
+                    className="text-sm text-charcoal/80 hover:text-charcoal font-semibold transition-colors hover:underline underline-offset-2 touch-target flex items-center"
+                    style={{ fontFamily: "var(--font-dm-sans)" }}>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <ul className="space-y-2.5 sm:space-y-3">
+              {["Projects", "Contact"].map((link) => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase()}`}
                     className="text-sm text-charcoal/80 hover:text-charcoal font-semibold transition-colors hover:underline underline-offset-2 touch-target flex items-center"

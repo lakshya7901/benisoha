@@ -49,6 +49,29 @@ export default function Footer() {
     },
   ];
 
+  // Extracted "Follow Us" block so we can place it differently on mobile vs desktop
+  const renderFollowUs = () => (
+    <div>
+      <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-charcoal/60 mb-3"
+        style={{ fontFamily: "var(--font-dm-sans)" }}>Follow Us</p>
+      <div className="flex items-center gap-2 flex-wrap">
+        {socials.map((s) => (
+          <a
+            key={s.label}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={s.label}
+            className="w-9 h-9 bg-charcoal text-white flex items-center justify-center hover:bg-charcoal-soft hover:-translate-y-0.5 transition-all duration-200 flex-shrink-0"
+            title={s.label}
+          >
+            {s.icon}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <footer className="relative overflow-hidden dot-pattern" style={{ background: "#f5d60c" }}>
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-charcoal" />
@@ -56,8 +79,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 sm:mb-14">
 
-          {/* Brand */}
-          <div className="sm:col-span-2">
+          {/* 1. Brand (Order 1 on all devices) */}
+          <div className="sm:col-span-2 order-1 sm:order-1">
             <div className="flex items-center gap-3 mb-4 sm:mb-5">
               <svg viewBox="0 0 36 36" className="w-9 h-9 flex-shrink-0" fill="none">
                 <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" stroke="#1A1A1A" strokeWidth="2" fill="none" />
@@ -76,37 +99,36 @@ export default function Footer() {
               </div>
             </div>
 
-            <p className="text-sm text-charcoal/80 leading-relaxed max-w-sm font-medium mb-6 sm:mb-7"
+            <p className="text-sm text-charcoal/80 leading-relaxed max-w-sm font-medium mb-0 sm:mb-7"
               style={{ fontFamily: "var(--font-dm-sans)" }}>
               A premier software and technical services company delivering application
               development, automation, and city electrical infrastructure projects with
               quality, safety, and precision.
             </p>
 
-            {/* Social Icons */}
-            <div>
-              <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-charcoal/60 mb-3"
-                style={{ fontFamily: "var(--font-dm-sans)" }}>Follow Us</p>
-              <div className="flex items-center gap-2 flex-wrap">
-                {socials.map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={s.label}
-                    className="w-9 h-9 bg-charcoal text-white flex items-center justify-center hover:bg-charcoal-soft hover:-translate-y-0.5 transition-all duration-200 flex-shrink-0"
-                    title={s.label}
-                  >
-                    {s.icon}
-                  </a>
-                ))}
-              </div>
+            {/* Hidden on mobile, visible on tablet/desktop */}
+            <div className="hidden sm:block">
+              {renderFollowUs()}
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* 2. Services (Order 2 on mobile, Order 3 on desktop) */}
+          <div className="order-2 sm:order-3">
+            <h4 className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold mb-4 sm:mb-5"
+              style={{ fontFamily: "var(--font-dm-sans)" }}>Services</h4>
+            <ul className="space-y-2.5 sm:space-y-3">
+              {["App Development", "Automation", "Digital Support", "Power Line Install", "Pole Erection"].map((s) => (
+                <li key={s} className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-charcoal flex-shrink-0" />
+                  <span className="text-sm text-charcoal/80 font-semibold"
+                    style={{ fontFamily: "var(--font-dm-sans)" }}>{s}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 3. Quick Links (Order 3 on mobile, Order 2 on desktop) */}
+          <div className="order-3 sm:order-2">
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold mb-4 sm:mb-5"
               style={{ fontFamily: "var(--font-dm-sans)" }}>Quick Links</h4>
             <ul className="space-y-2.5 sm:space-y-3">
@@ -122,20 +144,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold mb-4 sm:mb-5"
-              style={{ fontFamily: "var(--font-dm-sans)" }}>Services</h4>
-            <ul className="space-y-2.5 sm:space-y-3">
-              {["App Development", "Automation", "Digital Support", "Power Line Install", "Pole Erection"].map((s) => (
-                <li key={s} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-charcoal flex-shrink-0" />
-                  <span className="text-sm text-charcoal/80 font-semibold"
-                    style={{ fontFamily: "var(--font-dm-sans)" }}>{s}</span>
-                </li>
-              ))}
-            </ul>
+          {/* 4. Mobile Follow Us (Order 4 on mobile, Hidden on desktop) */}
+          <div className="order-4 sm:hidden">
+            {renderFollowUs()}
           </div>
+          
         </div>
 
         {/* Bottom bar */}

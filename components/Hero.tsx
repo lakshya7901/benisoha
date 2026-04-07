@@ -104,7 +104,7 @@ export default function Hero() {
                 Download Our App
               </p>
               <a
-                href="https://play.google.com/store"
+                href="/applications"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="playstore-btn w-fit"

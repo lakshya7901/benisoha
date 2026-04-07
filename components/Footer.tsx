@@ -48,8 +48,7 @@ export default function Footer() {
       ),
     },
   ];
-
-  // Extracted "Follow Us" block so we can place it differently on mobile vs desktop
+  
   const renderFollowUs = () => (
     <div>
       <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-charcoal/60 mb-3"

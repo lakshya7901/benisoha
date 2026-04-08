@@ -8,7 +8,7 @@ export default function Loader() {
 
   useEffect(() => {
     setMounted(true);
-    const timer = setTimeout(() => setHidden(true), 2400);
+    const timer = setTimeout(() => setHidden(true), 1200);
     return () => clearTimeout(timer);
   }, []);
 

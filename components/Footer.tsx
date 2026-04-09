@@ -89,7 +89,7 @@ export default function Footer() {
               </svg>
               <div>
                 <div className="font-semibold tracking-widest text-charcoal"
-                  style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.1rem" }}>
+                  style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.7rem" }}>
                   Benisoha Fusion
                 </div>
                 <div className="text-[9px] tracking-[0.25em] uppercase text-charcoal/60 font-bold">
@@ -126,39 +126,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 3. Quick Links (Order 3 on mobile, Order 2 on desktop) */}
+          {/* 3. Quick Links */}
           <div className="order-3 sm:order-2">
-            <h4 className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold mb-4 sm:mb-5"
-              style={{ fontFamily: "var(--font-dm-sans)" }}>Quick Links</h4>
-            <ul className="space-y-2.5 sm:space-y-3">
-              {["About", "Services"].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase()}`}
-                    className="text-sm text-charcoal/80 hover:text-charcoal font-semibold transition-colors hover:underline underline-offset-2 touch-target flex items-center"
-                    style={{ fontFamily: "var(--font-dm-sans)" }}>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <ul className="space-y-2.5 sm:space-y-3">
-              {["Applications"].map((link) => (
-                <li key={link}>
-                  <a href={`/${link.toLowerCase()}`}
-                    className="text-sm text-charcoal/80 hover:text-charcoal font-semibold transition-colors hover:underline underline-offset-2 touch-target flex items-center"
-                    style={{ fontFamily: "var(--font-dm-sans)" }}>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <ul className="space-y-2.5 sm:space-y-3">
-              {["Projects", "Contact"].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase()}`}
-                    className="text-sm text-charcoal/80 hover:text-charcoal font-semibold transition-colors hover:underline underline-offset-2 touch-target flex items-center"
-                    style={{ fontFamily: "var(--font-dm-sans)" }}>
-                    {link}
+            <h4
+              className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold mb-3"
+              style={{ fontFamily: "var(--font-dm-sans)" }}
+            >
+              Quick Links
+            </h4>
+            <ul className="flex flex-col">
+              {[
+                { label: "About",        href: "/#about" },
+                { label: "Services",     href: "/#services" },
+                { label: "Applications", href: "/applications" },
+                { label: "Projects",     href: "/#projects" },
+                { label: "Contact",      href: "/#contact" },
+              ].map((link) => (
+                <li key={link.label} className="border-b border-charcoal/10 last:border-0">
+                  <a
+                    href={link.href}
+                    className="text-sm text-charcoal/80 hover:text-charcoal font-semibold transition-colors block py-2.5"
+                    style={{ fontFamily: "var(--font-dm-sans)" }}
+                  >
+                    {link.label}
                   </a>
                 </li>
               ))}

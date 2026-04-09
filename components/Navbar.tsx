@@ -1,164 +1,203 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "About",    href: "/#about" },
-  { label: "Services", href: "/#services" },
-  { label: "Application",  href: "/applications" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Contact",  href: "/#contact" },
+  { label: "About",       href: "/#about" },
+  { label: "Services",    href: "/#services" },
+  { label: "Apps",        href: "/applications" },
+  { label: "Projects",    href: "/#projects" },
+  { label: "Contact",     href: "/#contact" },
 ];
 
 const searchableApps = [
-  { title: "EcoTrack Mobile", category: "Android App", href: "/applications#ecotrack-mobile" },
-  { title: "TaskMaster Pro", category: "Android App", href: "/applications#taskmaster-pro" },
-  { title: "Client Portal CRM", category: "Web Platform", href: "/applications#client-portal-crm" },
-  { title: "E-Commerce Storefront", category: "Web Platform", href: "/applications#e-commerce-storefront" },
+  { title: "EcoTrack Mobile",      category: "Android App",   href: "/applications#ecotrack-mobile" },
+  { title: "TaskMaster Pro",       category: "Android App",   href: "/applications#taskmaster-pro" },
+  { title: "Client Portal CRM",    category: "Web Platform",  href: "/applications#client-portal-crm" },
+  { title: "E-Commerce Storefront",category: "Web Platform",  href: "/applications#e-commerce-storefront" },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled]     = useState(false);
+  const [menuOpen, setMenuOpen]     = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  
-  const navRef = useRef<HTMLElement>(null);
+  const navRef   = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+  const isHome   = pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close menus on outside click
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setSearchOpen(false);
         setMenuOpen(false);
       }
     };
-    
-    document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside);
-    
+    document.addEventListener("mousedown", handler);
+    document.addEventListener("touchstart", handler);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
+      document.removeEventListener("mousedown", handler);
+      document.removeEventListener("touchstart", handler);
     };
   }, []);
 
-  const filteredApps = searchableApps.filter(app => 
-    app.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-    app.category.toLowerCase().includes(searchQuery.toLowerCase())
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+    setSearchOpen(false);
+  }, [pathname]);
+
+  const filtered = searchableApps.filter(
+    (a) =>
+      a.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      a.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return (
-    <nav ref={navRef} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? "bg-charcoal shadow-[0_2px_30px_rgba(0,0,0,0.4)] py-2.5 sm:py-3" : "bg-transparent py-4 sm:py-6"
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+  // On non-home pages the background is always charcoal (no gold bg)
+  const dark = scrolled || !isHome;
 
-        <a href="/" className="flex items-center gap-2 sm:gap-3 group">
-          <div className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0">
-            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const logoColor    = dark ? "#f5d60c" : "#1A1A1A";
+  const textColor    = dark ? "text-white" : "text-charcoal";
+  const subTextColor = dark ? "text-gold-400" : "text-charcoal/60";
+  const linkClass    = dark
+    ? "nav-link !text-white after:!bg-white"
+    : "nav-link text-charcoal";
+  const btnClass     = dark
+    ? "bg-gold-500 text-charcoal hover:bg-gold-400"
+    : "bg-charcoal text-white hover:bg-charcoal-soft";
+
+  return (
+    <nav
+      ref={navRef}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+        dark
+          ? "bg-charcoal shadow-[0_2px_24px_rgba(0,0,0,0.45)] py-2.5"
+          : "bg-transparent py-4 sm:py-5"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+
+        {/* ── Logo ── */}
+        <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
+          <div className="w-9 h-9 flex-shrink-0">
+            <svg viewBox="0 0 36 36" fill="none">
               <polygon points="18,2 34,10 34,26 18,34 2,26 2,10"
-                stroke={scrolled ? "#f5d60c" : "#1A1A1A"} strokeWidth="1.5" fill="none" />
+                stroke={logoColor} strokeWidth="1.8" fill="none" />
               <polygon points="18,8 28,13 28,23 18,28 8,23 8,13"
-                fill={scrolled ? "#f5d60c" : "#1A1A1A"} opacity="0.15" />
-              <text x="18" y="22" textAnchor="middle"
-                fill={scrolled ? "#f5d60c" : "#1A1A1A"}
-                fontSize="10" fontFamily="Cormorant Garamond, serif" fontWeight="700">BF</text>
+                fill={logoColor} opacity="0.15" />
+              <text x="18" y="22" textAnchor="middle" fill={logoColor}
+                fontSize="10" fontFamily="var(--font-cormorant)" fontWeight="700">BF</text>
             </svg>
           </div>
-          <div className="leading-tight">
-            <div className={`font-semibold tracking-widest transition-colors ${scrolled ? "text-white" : "text-charcoal"}`}
-              style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(0.85rem, 2.5vw, 1rem)" }}>
-              Benisoha
+          <div className="leading-snug">
+            <div
+              className={`transition-colors font-extrabold tracking-normal ${textColor}`}
+              style={{
+                fontFamily: "var(--font-cormorant)",
+                fontSize: "clamp(1.4rem, 3.5vw, 1.7rem)",
+                lineHeight: 1.05,
+                fontWeight: 900,
+                letterSpacing: "0.01em",
+              }}
+            >
+              Benisoha Fusion
             </div>
-            <div className={`text-[9px] tracking-[0.2em] uppercase font-bold ${scrolled ? "text-gold-400" : "text-charcoal opacity-60"}`}>
-              Fusion
+            <div
+              className={`text-2px] tracking-[0.28em] uppercase font-black mt-0.5 ${subTextColor}`}
+              style={{ fontFamily: "var(--font-dm-sans)", fontSize: "0.6rem" }}
+            >
+              Software &amp; Infrastructure
             </div>
           </div>
-        </a>
+        </Link>
 
-        <div className="hidden md:flex items-center gap-8 lg:gap-10">
-          {navLinks.map((link) => (
-            <a key={link.label} href={link.href}
-              className={`nav-link text-[11px] ${scrolled ? "!text-white after:!bg-white" : ""}`}>
-              {link.label}
-            </a>
+        {/* ── Desktop nav ── */}
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          {navLinks.map((l) => (
+            <Link key={l.label} href={l.href} className={`${linkClass} text-[11px]`}>
+              {l.label}
+            </Link>
           ))}
 
-          <div className="relative flex items-center">
-            <button 
-              onClick={() => {setSearchOpen(!searchOpen); setSearchQuery("");}}
-              className={`p-1 transition-colors hover:text-gold-500 ${scrolled ? "text-white" : "text-charcoal"}`}
-              aria-label="Search Applications"
+          {/* Search */}
+          <div className="relative">
+            <button
+              onClick={() => { setSearchOpen(!searchOpen); setSearchQuery(""); }}
+              className={`p-1.5 transition-colors hover:text-gold-500 ${dark ? "text-white" : "text-charcoal"}`}
+              aria-label="Search"
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"
+                strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
             </button>
 
             {searchOpen && (
-              <div className="absolute top-full right-0 mt-6 w-72 bg-charcoal shadow-[0_15px_40px_rgba(0,0,0,0.5)] border-t-2 border-gold-500 rounded-b overflow-hidden z-50">
+              <div className="absolute top-full right-0 mt-4 w-72 bg-charcoal shadow-2xl border-t-2 border-gold-500 z-50">
                 <div className="p-3 border-b border-white/10">
                   <input
-                    type="text"
                     autoFocus
-                    placeholder="Search apps & platforms..."
+                    type="text"
+                    placeholder="Search apps & platforms…"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full bg-transparent text-white text-sm outline-none placeholder:text-white/40"
                     style={{ fontFamily: "var(--font-dm-sans)" }}
                   />
                 </div>
-                <div className="max-h-64 overflow-y-auto">
-                  {filteredApps.length > 0 ? (
-                    filteredApps.map((res) => (
-                      <a
-                        key={res.title}
-                        href={res.href}
-                        onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
-                        className="block p-3 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
-                      >
-                        <div className="text-sm font-bold text-white transition-colors" style={{ fontFamily: "var(--font-cormorant)" }}>{res.title}</div>
-                        <div className="text-[10px] uppercase tracking-widest text-gold-500 mt-1" style={{ fontFamily: "var(--font-dm-sans)" }}>{res.category}</div>
-                      </a>
-                    ))
-                  ) : (
-                    <div className="p-4 text-xs text-white/50 text-center" style={{ fontFamily: "var(--font-dm-sans)" }}>No matches found</div>
+                <div className="max-h-60 overflow-y-auto">
+                  {filtered.length > 0 ? filtered.map((r) => (
+                    <Link key={r.title} href={r.href}
+                      onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
+                      className="block p-3 hover:bg-white/05 border-b border-white/05 last:border-0 transition-colors">
+                      <div className="text-sm font-bold text-white" style={{ fontFamily: "var(--font-cormorant)" }}>{r.title}</div>
+                      <div className="text-[10px] uppercase tracking-widest text-gold-500 mt-0.5" style={{ fontFamily: "var(--font-dm-sans)" }}>{r.category}</div>
+                    </Link>
+                  )) : (
+                    <div className="p-4 text-xs text-white/40 text-center">No matches found</div>
                   )}
                 </div>
               </div>
             )}
           </div>
 
-          <a href="/#contact"
-            className={`ml-2 px-4 lg:px-5 py-2 text-xs tracking-widest uppercase font-bold transition-all duration-300 ${
-              scrolled ? "bg-gold-500 text-charcoal hover:bg-gold-400" : "bg-charcoal text-white hover:bg-charcoal-soft"
-            }`}
+          <Link href="/#contact"
+            className={`px-4 lg:px-5 py-2 text-xs tracking-widest uppercase font-bold transition-all duration-300 ${btnClass}`}
             style={{ fontFamily: "var(--font-dm-sans)" }}>
             Get a Quote
-          </a>
+          </Link>
         </div>
 
-        <div className="md:hidden flex items-center gap-4">
-          <button 
-            onClick={() => {setSearchOpen(!searchOpen); setMenuOpen(false); setSearchQuery("");}}
-            className={`p-1 transition-colors ${scrolled ? "text-white" : "text-charcoal"}`}
+        {/* ── Mobile right cluster ── */}
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={() => { setSearchOpen(!searchOpen); setMenuOpen(false); setSearchQuery(""); }}
+            className={`p-1.5 ${dark ? "text-white" : "text-charcoal"}`}
+            aria-label="Search"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"
+              strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </button>
 
-          <button className="flex flex-col gap-[5px] p-2 -mr-2 touch-target"
-            onClick={() => {setMenuOpen(!menuOpen); setSearchOpen(false);}} aria-label="Toggle menu">
+          <button
+            className="flex flex-col gap-[5px] p-2 -mr-1"
+            onClick={() => { setMenuOpen(!menuOpen); setSearchOpen(false); }}
+            aria-label="Toggle menu"
+          >
             {[0, 1, 2].map((i) => (
-              <span key={i} className={`block h-[2px] transition-all duration-300 ${scrolled ? "bg-white" : "bg-charcoal"} ${
+              <span key={i} className={`block h-[2px] transition-all duration-300 ${dark ? "bg-white" : "bg-charcoal"} ${
                 i === 0 ? `w-6 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}` :
                 i === 1 ? `w-4 ${menuOpen ? "opacity-0" : ""}` :
                           `w-6 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`
@@ -168,53 +207,51 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* ── Mobile search panel ── */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-        searchOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+        searchOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
       } bg-charcoal border-t border-gold-500`}>
         <div className="p-4 border-b border-white/10">
           <input
             type="text"
-            placeholder="Search apps & platforms..."
+            placeholder="Search apps & platforms…"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full bg-transparent text-white text-sm outline-none placeholder:text-white/40 border border-white/20 p-3"
             style={{ fontFamily: "var(--font-dm-sans)" }}
           />
         </div>
-        <div className="max-h-60 overflow-y-auto">
-          {filteredApps.length > 0 ? (
-            filteredApps.map((res) => (
-              <a
-                key={res.title}
-                href={res.href}
-                onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
-                className="block p-4 hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
-              >
-                <div className="text-sm font-bold text-white" style={{ fontFamily: "var(--font-cormorant)" }}>{res.title}</div>
-                <div className="text-[10px] uppercase tracking-widest text-gold-500 mt-1" style={{ fontFamily: "var(--font-dm-sans)" }}>{res.category}</div>
-              </a>
-            ))
-          ) : (
-            <div className="p-4 text-xs text-white/50 text-center" style={{ fontFamily: "var(--font-dm-sans)" }}>No matches found</div>
+        <div className="max-h-56 overflow-y-auto">
+          {filtered.length > 0 ? filtered.map((r) => (
+            <Link key={r.title} href={r.href}
+              onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
+              className="block p-4 hover:bg-white/05 border-b border-white/05 last:border-0 transition-colors">
+              <div className="text-sm font-bold text-white" style={{ fontFamily: "var(--font-cormorant)" }}>{r.title}</div>
+              <div className="text-[10px] uppercase tracking-widest text-gold-500 mt-1" style={{ fontFamily: "var(--font-dm-sans)" }}>{r.category}</div>
+            </Link>
+          )) : (
+            <div className="p-4 text-xs text-white/40 text-center">No matches found</div>
           )}
         </div>
       </div>
 
+      {/* ── Mobile menu ── */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${
         menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
       } bg-charcoal border-t border-white/10`}>
-        <div className="px-4 sm:px-6 py-5 flex flex-col gap-1">
-          {navLinks.map((link) => (
-            <a key={link.label} href={link.href}
-              className="text-white text-sm font-bold tracking-widest uppercase hover:text-gold-400 transition-colors py-3 border-b border-white/05"
+        <div className="px-4 py-4 flex flex-col">
+          {navLinks.map((l) => (
+            <Link key={l.label} href={l.href}
+              className="text-white text-sm font-bold tracking-widest uppercase hover:text-gold-400 transition-colors py-3.5 border-b border-white/08 last:border-0"
               onClick={() => setMenuOpen(false)}>
-              {link.label}
-            </a>
+              {l.label}
+            </Link>
           ))}
-          <a href="/#contact" onClick={() => setMenuOpen(false)}
-            className="mt-4 inline-block px-5 py-3 bg-gold-500 text-charcoal text-xs tracking-widest uppercase font-bold text-center hover:bg-gold-400 transition-all">
+          <Link href="/#contact"
+            className="mt-4 px-5 py-3.5 bg-gold-500 text-charcoal text-xs tracking-widest uppercase font-bold text-center hover:bg-gold-400 transition-all"
+            onClick={() => setMenuOpen(false)}>
             Get a Quote
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

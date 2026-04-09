@@ -8,7 +8,10 @@ export default function Hero() {
   useEffect(() => {
     const el = heroRef.current;
     if (!el) return;
-    setTimeout(() => el.classList.remove("opacity-0"), 2500);
+    const alreadyLoaded = sessionStorage.getItem("bf_loaded_before");
+    sessionStorage.setItem("bf_loaded_before", "1");
+    const delay = alreadyLoaded ? 100 : 2600;
+    setTimeout(() => el.classList.remove("opacity-0"), delay);
   }, []);
 
   return (

@@ -5,16 +5,19 @@
 :root {
   --gold: #f5d60c;
   --gold-dark: #dcc40a;
-  --gold-deeper: #c4bc09;
-  --white: #ffffff;
   --charcoal: #1A1A1A;
   --charcoal-soft: #2d2d2d;
-  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
-  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-cormorant: var(--font-cormorant-var, 'Cormorant Garamond', Georgia, serif);
+  --font-dm-sans: var(--font-dm-sans-var, 'DM Sans', sans-serif);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+html {
+  scroll-behavior: smooth;
+  /* Prevent layout shift from scrollbar appearing */
+  scrollbar-gutter: stable;
+}
 
 body {
   font-family: var(--font-dm-sans);
@@ -22,44 +25,22 @@ body {
   color: var(--charcoal);
   overflow-x: hidden;
   font-weight: 500;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* ── Loading screen ───────────────────────── */
-#page-loader {
-  position: fixed;
-  inset: 0;
-  background: #1A1A1A;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
-}
-#page-loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+/* ── Loader ────────────────────────────────── */
+.loader-bolt { position: relative; width: 52px; height: 70px; }
+.loader-bolt svg { width: 100%; height: 100%; }
 
-/* Lightning bolt loader */
-.loader-bolt {
-  position: relative;
-  width: 60px;
-  height: 80px;
-}
-.loader-bolt svg {
-  width: 100%;
-  height: 100%;
-}
 @keyframes boltPulse {
   0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px #f5d60c); transform: scale(1); }
-  50%       { opacity: 0.6; filter: drop-shadow(0 0 20px #f5d60c); transform: scale(1.1); }
+  50%       { opacity: 0.65; filter: drop-shadow(0 0 20px #f5d60c); transform: scale(1.1); }
 }
 .loader-bolt svg { animation: boltPulse 1s ease-in-out infinite; }
 
-/* Progress bar */
 @keyframes loadProgress {
   0%   { width: 0%; }
   60%  { width: 75%; }
@@ -68,140 +49,127 @@ body {
 }
 .loader-bar-fill { animation: loadProgress 2s ease-out forwards; }
 
-/* Orbit ring */
 @keyframes orbitSpin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
 .loader-orbit {
   position: absolute;
-  inset: -20px;
+  inset: -22px;
   border-radius: 50%;
   border: 2px solid transparent;
   border-top-color: #f5d60c;
-  border-right-color: rgba(245,214,12,0.3);
-  animation: orbitSpin 1.2s linear infinite;
+  border-right-color: rgba(245,214,12,0.25);
+  animation: orbitSpin 1.1s linear infinite;
 }
 
-/* ── Dot pattern & line pattern ──────────── */
+/* ── Patterns ──────────────────────────────── */
 .dot-pattern {
   background-image: radial-gradient(circle, rgba(0,0,0,0.09) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 .line-pattern {
   background-image: repeating-linear-gradient(
-    -45deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 1px,
+    -45deg, rgba(0,0,0,0.035) 0px, rgba(0,0,0,0.035) 1px,
     transparent 1px, transparent 12px
   );
 }
 
-/* ── Reveal animation ─────────────────────── */
+/* ── Reveal ────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  will-change: opacity, transform;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ── Nav link ─────────────────────────────── */
+/* ── Nav link ──────────────────────────────── */
 .nav-link {
   position: relative;
   font-family: var(--font-dm-sans);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  color: var(--charcoal);
-  transition: color 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 .nav-link::after {
   content: '';
   position: absolute;
   bottom: -3px; left: 0;
   width: 0; height: 2px;
-  background: var(--charcoal);
-  transition: width 0.3s ease;
+  background: currentColor;
+  transition: width 0.28s ease;
 }
 .nav-link:hover::after { width: 100%; }
 
-/* ── Scrollbar ────────────────────────────── */
+/* ── Scrollbar ─────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--gold-dark); }
 ::-webkit-scrollbar-thumb { background: var(--charcoal); border-radius: 3px; }
 
-/* ── Card fade-up ─────────────────────────── */
+/* ── Animations ────────────────────────────── */
 @keyframes cardFadeUp {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Float ────────────────────────────────── */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
 }
-.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float { animation: float 5.5s ease-in-out infinite; }
 
-/* ── Spin ─────────────────────────────────── */
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
 }
-.animate-spin-slow { animation: spin-slow 20s linear infinite; }
-.animate-spin-rev  { animation: spin-slow 15s linear infinite reverse; }
+.animate-spin-slow { animation: spinSlow 22s linear infinite; }
+.animate-spin-rev  { animation: spinSlow 16s linear infinite reverse; }
 
-/* ── Floating Telegram button ─────────────── */
+/* ── Floating Telegram ─────────────────────── */
 .float-tg {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 20px; right: 20px;
   z-index: 1000;
-  width: 56px;
-  height: 56px;
+  width: 52px; height: 52px;
   background: #1A1A1A;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
   text-decoration: none;
 }
-.float-tg:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
-}
+.float-tg:hover { transform: translateY(-4px) scale(1.06); box-shadow: 0 8px 28px rgba(0,0,0,0.45); }
+
 @keyframes tgPing {
-  0%   { transform: scale(1); opacity: 0.7; }
+  0%   { transform: scale(1); opacity: 0.6; }
   100% { transform: scale(1.9); opacity: 0; }
 }
 .float-tg-ping {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
+  position: absolute; inset: 0; border-radius: 50%;
   background: #f5d60c;
-  animation: tgPing 2s ease-out infinite;
+  animation: tgPing 2.2s ease-out infinite;
 }
 
-/* ── Play Store button ────────────────────── */
+/* ── Play Store button ─────────────────────── */
 .playstore-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #1A1A1A;
-  color: #ffffff;
-  padding: 10px 20px;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #1A1A1A; color: #fff;
+  padding: 10px 18px;
   border-radius: 8px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
 }
-.playstore-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-}
+.playstore-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
 
-/* ── Mobile touch targets ─────────────────── */
-@media (max-width: 640px) {
-  .touch-target { min-height: 44px; }
+/* ── Mobile tap targets ────────────────────── */
+.touch-target { min-height: 44px; min-width: 44px; }
+
+/* ── Performance: reduce motion ────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

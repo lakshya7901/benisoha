@@ -1,67 +1,80 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Loader() {
-  const [hidden, setHidden] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [show, setShow] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    setMounted(true);
-    const timer = setTimeout(() => setHidden(true), 1800);
-    return () => clearTimeout(timer);
-  }, []);
+    // Only show loader once per browser session (not on every page nav)
+    const key = "bf_loaded";
+    if (!sessionStorage.getItem(key)) {
+      sessionStorage.setItem(key, "1");
+      setShow(true);
+      const t = setTimeout(() => setShow(false), 1200);
+      return () => clearTimeout(t);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run once on initial mount only
 
-  if (!mounted) return null;
+  if (!show) return null;
 
   return (
-    <div id="page-loader" className={hidden ? "hidden" : ""}>
-      {/* Center content */}
-      <div className="flex flex-col items-center gap-6">
-
-        {/* Animated bolt + orbit ring */}
-        <div className="relative w-16 h-16 flex items-center justify-center">
-          <div className="loader-orbit" />
-          <div className="loader-bolt">
-            <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon
-                points="36,4 22,38 32,38 24,76 48,30 34,30"
-                fill="#f5d60c"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+    <div
+      id="page-loader"
+      style={{
+        position: "fixed", inset: 0, background: "#1A1A1A",
+        zIndex: 9999, display: "flex", flexDirection: "column",
+        alignItems: "center", justifyContent: "center", gap: 28,
+        animation: "loaderFadeOut 0.5s ease 2s forwards",
+      }}
+    >
+      {/* Orbit + bolt */}
+      <div style={{ position: "relative", width: 64, height: 64, display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="loader-orbit" />
+        <div className="loader-bolt">
+          <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="36,4 22,38 32,38 24,76 48,30 34,30" fill="#f5d60c" strokeLinejoin="round" />
+          </svg>
         </div>
-
-        {/* Brand name */}
-        <div className="text-center">
-          <div
-            className="text-white tracking-[0.3em] uppercase font-semibold text-lg"
-            style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem" }}
-          >
-            Benisoha
-          </div>
-          <div
-            className="text-[10px] tracking-[0.35em] uppercase font-bold mt-0.5"
-            style={{ color: "#f5d60c", fontFamily: "var(--font-dm-sans)" }}
-          >
-            Fusion
-          </div>
-        </div>
-
-        {/* Progress bar */}
-        <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden">
-          <div className="loader-bar-fill h-full bg-gold-500 rounded-full" />
-        </div>
-
-        {/* Tagline */}
-        <p
-          className="text-white/40 text-[10px] tracking-[0.25em] uppercase"
-          style={{ fontFamily: "var(--font-dm-sans)" }}
-        >
-          Power · Code · Infrastructure
-        </p>
       </div>
+
+      {/* Brand */}
+      <div style={{ textAlign: "center" }}>
+        <div style={{
+          color: "#fff", letterSpacing: "0.3em", textTransform: "uppercase",
+          fontFamily: "var(--font-cormorant)", fontSize: "1.5rem", fontWeight: 600,
+        }}>
+          Benisoha
+        </div>
+        <div style={{
+          fontSize: "0.65rem", letterSpacing: "0.35em", textTransform: "uppercase",
+          fontWeight: 700, color: "#f5d60c", fontFamily: "var(--font-dm-sans)", marginTop: 4,
+        }}>
+          Fusion
+        </div>
+      </div>
+
+      {/* Progress bar */}
+      <div style={{ width: 192, height: 2, background: "rgba(255,255,255,0.1)", borderRadius: 9999, overflow: "hidden" }}>
+        <div className="loader-bar-fill" style={{ height: "100%", background: "#f5d60c", borderRadius: 9999 }} />
+      </div>
+
+      <p style={{
+        color: "rgba(255,255,255,0.35)", fontSize: "0.65rem",
+        letterSpacing: "0.25em", textTransform: "uppercase",
+        fontFamily: "var(--font-dm-sans)",
+      }}>
+        Power · Code · Infrastructure
+      </p>
+
+      <style>{`
+        @keyframes loaderFadeOut {
+          to { opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+      `}</style>
     </div>
   );
 }

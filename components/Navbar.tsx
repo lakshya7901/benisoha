@@ -104,14 +104,14 @@ export default function Navbar() {
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "clamp(1.4rem, 3.5vw, 1.7rem)",
                 lineHeight: 1.05,
-                fontWeight: 900,
+                fontWeight: 700,
                 letterSpacing: "0.01em",
               }}
             >
               Benisoha Fusion
             </div>
             <div
-              className={`text-2px] tracking-[0.28em] uppercase font-black mt-0.5 ${subTextColor}`}
+              className={`text-[10px] tracking-[0.28em] uppercase font-black mt-0.5 ${subTextColor}`}
               style={{ fontFamily: "var(--font-dm-sans)", fontSize: "0.6rem" }}
             >
               Software &amp; Infrastructure

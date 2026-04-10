@@ -221,7 +221,7 @@ export default function Contact() {
             </div>
 
             {/* Location info card */}
-            {/* <div className="bg-gold-500 p-6 sm:p-8 h-full flex flex-col justify-between min-h-[200px] lg:min-h-[360px]">
+            <div className="bg-gold-500 p-6 sm:p-8 h-full flex flex-col justify-between min-h-[200px] lg:min-h-[360px]">
               <div>
                 <h3
                   className="text-charcoal font-bold mb-6 leading-tight"
@@ -290,7 +290,7 @@ export default function Contact() {
                 </div>
               </div>
 
-
+              {/* Directions button */}
               <a
                 href="https://maps.google.com/?q=Mumbai,India"
                 target="_blank"
@@ -303,7 +303,7 @@ export default function Contact() {
                 </svg>
                 Get Directions
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

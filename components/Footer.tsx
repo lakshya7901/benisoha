@@ -88,11 +88,21 @@ export default function Footer() {
                   fontSize="10" fontFamily="Cormorant Garamond, serif" fontWeight="700">BF</text>
               </svg>
               <div>
-                <div className="font-semibold tracking-widest text-charcoal"
-                  style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.7rem" }}>
+                <div
+                  className="text-charcoal font-extrabold leading-tight"
+                  style={{
+                    fontFamily: "var(--font-cormorant)",
+                    fontSize: "clamp(1.6rem, 3vw, 2rem)",
+                    fontWeight: 800,
+                    letterSpacing: "0.02em",
+                  }}
+                >
                   Benisoha Fusion
                 </div>
-                <div className="text-[9px] tracking-[0.25em] uppercase text-charcoal/60 font-bold">
+                <div
+                  className="uppercase text-charcoal/70 font-black tracking-[0.25em] mt-0.5"
+                  style={{ fontFamily: "var(--font-dm-sans)", fontSize: "0.62rem" }}
+                >
                   Software &amp; Infrastructure
                 </div>
               </div>

@@ -188,6 +188,124 @@ export default function Contact() {
             </div>
           </div>
         </div>
+
+        {/* ── Google Map ── */}
+        <div className="mt-16 sm:mt-20 reveal">
+          {/* Section label */}
+          <div className="flex items-center gap-3 mb-6">
+            <span className="w-8 h-[2px] bg-gold-500" />
+            <span
+              className="text-[10px] tracking-[0.3em] uppercase text-gold-400 font-bold"
+              style={{ fontFamily: "var(--font-dm-sans)" }}
+            >
+              Find Us
+            </span>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6 items-start">
+            {/* Map embed */}
+            <div className="lg:col-span-2 relative overflow-hidden border-2 border-white/10 hover:border-gold-500/50 transition-colors duration-300">
+              {/* Gold top bar */}
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gold-500 z-10" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823357!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                width="100%"
+                height="360"
+                style={{ border: 0, display: "block" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Benisoha Fusion Location"
+                className="grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+
+            {/* Location info card */}
+            {/* <div className="bg-gold-500 p-6 sm:p-8 h-full flex flex-col justify-between min-h-[200px] lg:min-h-[360px]">
+              <div>
+                <h3
+                  className="text-charcoal font-bold mb-6 leading-tight"
+                  style={{
+                    fontFamily: "var(--font-cormorant)",
+                    fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                    fontWeight: 700,
+                  }}
+                >
+                  Our Office <br />
+                  <span className="italic font-light">Location</span>
+                </h3>
+
+                <div className="space-y-4">
+                  {[
+                    {
+                      icon: (
+                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
+                          <circle cx="12" cy="10" r="3" stroke="#1A1A1A" strokeWidth="1.8" />
+                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#1A1A1A" strokeWidth="1.8" />
+                        </svg>
+                      ),
+                      label: "Address",
+                      value: "India",
+                    },
+                    {
+                      icon: (
+                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
+                          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.06 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#1A1A1A" strokeWidth="1.8" />
+                        </svg>
+                      ),
+                      label: "Phone",
+                      value: "+91 98765 43210",
+                    },
+                    {
+                      icon: (
+                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
+                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#1A1A1A" strokeWidth="1.8" />
+                          <polyline points="22,6 12,13 2,6" stroke="#1A1A1A" strokeWidth="1.8" />
+                        </svg>
+                      ),
+                      label: "Email",
+                      value: "hello@benisohafusion.com",
+                    },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-charcoal flex items-center justify-center flex-shrink-0">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p
+                          className="text-[10px] tracking-[0.2em] uppercase text-charcoal/60 font-black mb-0.5"
+                          style={{ fontFamily: "var(--font-dm-sans)" }}
+                        >
+                          {item.label}
+                        </p>
+                        <p
+                          className="text-sm text-charcoal font-semibold"
+                          style={{ fontFamily: "var(--font-dm-sans)" }}
+                        >
+                          {item.value}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+
+              <a
+                href="https://maps.google.com/?q=Mumbai,India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 flex items-center justify-center gap-2 bg-charcoal text-white py-3 px-4 text-xs tracking-widest uppercase font-bold hover:bg-charcoal-soft transition-all duration-300"
+                style={{ fontFamily: "var(--font-dm-sans)" }}
+              >
+                <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Get Directions
+              </a>
+            </div> */}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ export default function Loader() {
     if (!sessionStorage.getItem(key)) {
       sessionStorage.setItem(key, "1");
       setShow(true);
-      const t = setTimeout(() => setShow(false), 1200);
+      const t = setTimeout(() => setShow(false), 2400);
       return () => clearTimeout(t);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -67,7 +67,7 @@ export default function Contact() {
 
             <h2 className="reveal mb-6 leading-tight text-white"
               style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500 }}>
-              Let&apos;s Build{" "}
+              Let's Build{" "}
               <span className="italic font-light text-gold-400">Something</span>
               <br />Great Together
             </h2>
@@ -117,7 +117,7 @@ export default function Contact() {
                     Message Received
                   </h3>
                   <p className="text-charcoal/80 text-sm font-medium" style={{ fontFamily: "var(--font-dm-sans)" }}>
-                    Thank you for reaching out. We&apos;ll get back to you within 24 hours.
+                    Thank you for reaching out. We'll get back to you within 24 hours.
                   </p>
                   <button onClick={() => setStatus("idle")}
                     className="mt-6 text-xs tracking-widest uppercase text-charcoal border-b-2 border-charcoal hover:opacity-70 transition-opacity font-bold"
@@ -220,89 +220,33 @@ export default function Contact() {
               />
             </div>
 
-            {/* Location info card */}
-            <div className="bg-gold-500 p-6 sm:p-8 h-full flex flex-col justify-between min-h-[200px] lg:min-h-[360px]">
-              <div>
-                <h3
-                  className="text-charcoal font-bold mb-6 leading-tight"
-                  style={{
-                    fontFamily: "var(--font-cormorant)",
-                    fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                    fontWeight: 700,
-                  }}
-                >
-                  Our Office <br />
-                  <span className="italic font-light">Location</span>
-                </h3>
-
-                <div className="space-y-4">
-                  {[
-                    {
-                      icon: (
-                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
-                          <circle cx="12" cy="10" r="3" stroke="#1A1A1A" strokeWidth="1.8" />
-                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#1A1A1A" strokeWidth="1.8" />
-                        </svg>
-                      ),
-                      label: "Address",
-                      value: "India",
-                    },
-                    {
-                      icon: (
-                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
-                          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.06 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#1A1A1A" strokeWidth="1.8" />
-                        </svg>
-                      ),
-                      label: "Phone",
-                      value: "+91 98765 43210",
-                    },
-                    {
-                      icon: (
-                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
-                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#1A1A1A" strokeWidth="1.8" />
-                          <polyline points="22,6 12,13 2,6" stroke="#1A1A1A" strokeWidth="1.8" />
-                        </svg>
-                      ),
-                      label: "Email",
-                      value: "hello@benisohafusion.com",
-                    },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-charcoal flex items-center justify-center flex-shrink-0">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <p
-                          className="text-[10px] tracking-[0.2em] uppercase text-charcoal/60 font-black mb-0.5"
-                          style={{ fontFamily: "var(--font-dm-sans)" }}
-                        >
-                          {item.label}
-                        </p>
-                        <p
-                          className="text-sm text-charcoal font-semibold"
-                          style={{ fontFamily: "var(--font-dm-sans)" }}
-                        >
-                          {item.value}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+            {/* Animated "Visit Us" & Floating Arrow */}
+            <div className="hidden lg:flex flex-col justify-center items-start h-[360px] pl-4 xl:pl-8 relative">
+              <div className="flex items-center gap-6">
+                {/* Floating Arrow Pointing Left */}
+                <div className="animate-[floatLeft_2s_ease-in-out_infinite]">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f5d60c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="20" y1="12" x2="4" y2="12"></line>
+                    <polyline points="10 19 3 12 10 5"></polyline>
+                  </svg>
+                </div>
+                
+                {/* Text Block */}
+                <div className="flex flex-col">
+                  <h3 className="text-white leading-none mt-2" 
+                      style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.5rem, 3vw, 3.5rem)", fontWeight: 500 }}>
+                    Visit <br/><span className="italic font-light text-gold-400">Us</span>
+                  </h3>
                 </div>
               </div>
-
-              {/* Directions button */}
-              <a
-                href="https://maps.google.com/?q=Mumbai,India"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 flex items-center justify-center gap-2 bg-charcoal text-white py-3 px-4 text-xs tracking-widest uppercase font-bold hover:bg-charcoal-soft transition-all duration-300"
-                style={{ fontFamily: "var(--font-dm-sans)" }}
-              >
-                <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
-                  <polygon points="3 11 22 2 13 21 11 13 3 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                Get Directions
-              </a>
+              
+              {/* Inline Styles for Animation */}
+              <style dangerouslySetInnerHTML={{__html: `
+                @keyframes floatLeft {
+                  0%, 100% { transform: translateX(0); }
+                  50% { transform: translateX(-20px); }
+                }
+              `}} />
             </div>
           </div>
         </div>

@@ -208,7 +208,7 @@ export default function Contact() {
               {/* Gold top bar */}
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-gold-500 z-10" />
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28104.138022455423!2d74.94619817854282!3d28.297801504321637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39136200b18a66a3%3A0x3e487bf6934c8306!2sChuru%2C%20Rajasthan%20331001!5e0!3m2!1sen!2sin!4v1776182170229!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28104.138022455423!2d74.94619817854282!3d28.297801504321637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39136200b18a66a3%3A0x3e487bf6934c8306!2sChuru%2C%20Rajasthan%20331001!5e0!3m2!1sen!2sin!4v1776182170229!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                 width="100%"
                 height="360"
                 style={{ border: 0, display: "block" }}

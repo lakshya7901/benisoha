@@ -9,30 +9,30 @@ export const metadata: Metadata = {
 
 const androidApps = [
   {
-    title: "EcoTrack Mobile",
-    desc: "Track your daily carbon footprint and discover eco-friendly alternatives. Real-time analytics right in your pocket.",
-    tags: ["Android", "Kotlin", "Utility"],
+    title: "Clone Master – Multi Dual Space ",
+    desc: "Run multiple accounts of your apps on one Android device. Separate work and personal apps, or use dual accounts for games, social media, and more.",
+    tags: ["Android", "Tools", "Multi-Space"],
     link: "https://play.google.com/store",
   },
   {
-    title: "TaskMaster Pro",
-    desc: "Advanced task management for professionals. Syncs seamlessly with our enterprise backend.",
-    tags: ["Android", "React Native", "Productivity"],
+    title: "Future Utility Apps",
+    desc: "We are actively building additional Android utilities. When a new application is published, it will appear here with official Play Store and direct APK download links.",
+    tags: ["Android", "Utility", "Coming Soon"],
     link: "https://play.google.com/store",
   },
 ];
 
 const websites = [
   {
-    title: "Client Portal CRM",
-    desc: "A fully responsive web platform for businesses to manage client interactions, invoices, and support tickets.",
-    tags: ["Next.js", "Web", "B2B"],
+    title: "Full-Stack Web Development",
+    desc: "Custom freelance web applications built with modern architectures. We prioritize high-performance UI/UX by leveraging the latest versions of modern frontend frameworks.",
+    tags: ["Next.js", "Tailwind CSS", "MERN"],
     link: "https://your-website.com",
   },
   {
-    title: "E-Commerce Storefront",
-    desc: "A modern, high-performance digital storefront optimized for speed and conversion rates.",
-    tags: ["React", "Stripe", "E-Commerce"],
+    title: "Intelligent Backend Systems",
+    desc: "Exploring the intersection of full-stack web development and Generative AI, engineering robust backend solutions capable of handling complex automation and data pipelines.",
+    tags: ["Python", "Django", "FastAPI"],
     link: "https://your-website.com",
   },
 ];
@@ -68,7 +68,7 @@ export default function ApplicationsPage() {
             <span className="w-8 h-[2px] bg-charcoal" />
             <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-charcoal"
               style={{ fontFamily: "var(--font-dm-sans)" }}>
-              Built by Benisoha Fusion
+              BENISOHA FUSION LLP
             </span>
             <span className="w-8 h-[2px] bg-charcoal" />
           </div>
@@ -76,14 +76,14 @@ export default function ApplicationsPage() {
             className="text-charcoal mb-3 sm:mb-4 leading-tight"
             style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.4rem, 8vw, 4rem)", fontWeight: 600 }}
           >
-            Our{" "}
+            Benisoha{" "}
             <span className="italic font-light text-white" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}>
               Applications
             </span>
           </h1>
           <p className="text-charcoal/80 max-w-xl mx-auto text-sm sm:text-base font-medium"
             style={{ fontFamily: "var(--font-dm-sans)" }}>
-            Mobile apps and digital platforms built by our team — download or visit them live.
+            Select your Android utility and choose between an official Google Play Store installation or a direct APK download.
           </p>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function ApplicationsPage() {
               <span className="w-6 sm:w-8 h-[2px] bg-gold-500 flex-shrink-0" />
               <h2 className="text-base sm:text-xl font-bold text-white uppercase tracking-widest"
                 style={{ fontFamily: "var(--font-dm-sans)" }}>
-                Android Apps
+                ANDROID APPLICATIONS
               </h2>
               <div className="flex-1 h-[1px] bg-white/08" />
               {/* Android icon badge */}
@@ -161,7 +161,7 @@ export default function ApplicationsPage() {
               <span className="w-6 sm:w-8 h-[2px] bg-gold-500 flex-shrink-0" />
               <h2 className="text-base sm:text-xl font-bold text-white uppercase tracking-widest"
                 style={{ fontFamily: "var(--font-dm-sans)" }}>
-                Web Platforms
+                WEB PLATFORMS
               </h2>
               <div className="flex-1 h-[1px] bg-white/08" />
               <div className="w-8 h-8 bg-white/05 border border-white/20 flex items-center justify-center flex-shrink-0">

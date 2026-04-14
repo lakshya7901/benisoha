@@ -47,7 +47,6 @@ export default function Contact() {
   };
 
   return (
-    /* Dark charcoal section — strong contrast */
     <section id="contact" ref={sectionRef} className="py-16 sm:py-28 bg-charcoal relative overflow-hidden">
       {/* Gold top stripe */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500" />

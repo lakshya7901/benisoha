@@ -40,7 +40,6 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    /* White band — strong contrast between gold sections */
     <section className="py-12 sm:py-20 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gold-500" />
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gold-500" />

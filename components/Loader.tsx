@@ -8,7 +8,6 @@ export default function Loader() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Only show loader once per browser session (not on every page nav)
     const key = "bf_loaded";
     if (!sessionStorage.getItem(key)) {
       sessionStorage.setItem(key, "1");
@@ -16,9 +15,7 @@ export default function Loader() {
       const t = setTimeout(() => setShow(false), 2400);
       return () => clearTimeout(t);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Run once on initial mount only
-
+  }, []); 
   if (!show) return null;
 
   return (
@@ -67,7 +64,7 @@ export default function Loader() {
         letterSpacing: "0.25em", textTransform: "uppercase",
         fontFamily: "var(--font-dm-sans)",
       }}>
-        Power · Code · Infrastructure
+        APPLICATIONS & POWER
       </p>
 
       <style>{`

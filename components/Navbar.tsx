@@ -33,7 +33,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menus on outside click
   useEffect(() => {
     const handler = (e: MouseEvent | TouchEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -49,7 +48,6 @@ export default function Navbar() {
     };
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMenuOpen(false);
     setSearchOpen(false);
@@ -61,7 +59,6 @@ export default function Navbar() {
       a.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // On non-home pages the background is always charcoal (no gold bg)
   const dark = scrolled || !isHome;
 
   const logoColor    = dark ? "#f5d60c" : "#1A1A1A";

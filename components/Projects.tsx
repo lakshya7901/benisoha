@@ -54,7 +54,6 @@ export default function Projects() {
   };
 
   return (
-    /* Gold background section */
     <section id="projects" ref={sectionRef} className="py-16 sm:py-28 bg-gold-500 dot-pattern relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 

@@ -4,44 +4,32 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
-    category: "Application",
-    title: "Enterprise Resource Management System",
-    desc: "A full-stack ERP platform for a manufacturing firm — covering inventory, HR, and financial reporting with real-time dashboards.",
-    tags: ["React", "Node.js", "PostgreSQL"],
+    category: "ANDROID",
+    title: "Clone Master - Multi Dual Space",
+    desc: "Run multiple accounts of your apps on a single Android device. Designed to separate work and personal applications, or run dual accounts for gaming and social media.",
+    tags: ["Tools", "Multi-Space", "com.cmaster.cloner"],
   },
   {
-    category: "Automation",
-    title: "Automated Invoice Processing Pipeline",
-    desc: "OCR-powered document automation reducing manual invoicing effort by 80% with built-in validation and ERP integration.",
-    tags: ["Python", "RPA", "API Integration"],
+    category: "ANDROID",
+    title: "Future Utility Applications",
+    desc: "We are actively architecting additional Android utilities. Future releases will be published directly to our portfolio with Google Play and direct APK download access.",
+    tags: ["Utility", "In Development", "Android"],
   },
   {
-    category: "Infrastructure",
-    title: "Urban Power Line Network — Phase 1",
-    desc: "City-wide HT power line installation project for the Electricity Department covering 15km of urban distribution network.",
-    tags: ["HT Lines", "Pole Erection", "Govt. Project"],
+    category: "POWER SETUP",
+    title: "High-Power Equipment Setup",
+    desc: "Professional installation of heavy load electrical connections, specializing in capacities around 11,000 watts (11 kW) for our local region.",
+    tags: ["11 kW", "Heavy Load", "Local Install"],
   },
-  {
-    category: "Application",
-    title: "Customer Support Digital Portal",
-    desc: "A multi-channel support portal with ticketing, live chat integration, and analytics for a regional service provider.",
-    tags: ["Next.js", "TypeScript", "REST API"],
-  },
-  {
-    category: "Infrastructure",
-    title: "Pole Installation — Industrial Zone",
-    desc: "Large-scale concrete pole installation for an industrial zone, including site survey, foundation work, and commissioning.",
-    tags: ["LT Lines", "Foundation Work", "Safety Audit"],
-  },
-  {
-    category: "Automation",
-    title: "Fleet Monitoring & Alert System",
-    desc: "IoT-connected fleet tracking system with geofencing, driver behavior analytics, and real-time alert dashboards.",
-    tags: ["IoT", "React", "Node.js"],
+    {
+    category: "POWER SETUP",
+    title: "Infrastructure Wiring & Safety",
+    desc: "Executing precise wiring protocols accompanied by rigorous safety checks and basic operational testing to ensure secure, high-capacity setups.",
+    tags: ["Safety Audit", "Wiring", "Foundation Work"],
   },
 ];
 
-const categories = ["All", "Application", "Automation", "Infrastructure"];
+const categories = ["ALL", "ANDROID", "WEB APPLICATIONS", "POWER SETUP"];
 
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -76,12 +64,12 @@ export default function Projects() {
             <div className={`flex items-center gap-3 mb-4 transition-all duration-700 ${sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <span className="w-8 h-[2px] bg-charcoal" />
               <span className="text-xs tracking-[0.3em] uppercase text-charcoal font-bold"
-                style={{ fontFamily: "var(--font-dm-sans)" }}>Our Work</span>
+                style={{ fontFamily: "var(--font-dm-sans)" }}>BENISOHA PORTFOLIO</span>
             </div>
             <h2 className={`transition-all duration-700 delay-100 ${sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 600, color: "#1A1A1A" }}>
-              Featured{" "}
-              <span className="italic font-light text-white" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}>Projects</span>
+              Application &{" "}
+              <span className="italic font-light text-white" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.15)" }}>Installations</span>
             </h2>
           </div>
 

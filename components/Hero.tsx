@@ -48,7 +48,7 @@ export default function Hero() {
                 className="text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.3em] uppercase text-charcoal font-bold"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
-                Premium Tech &amp; Infrastructure
+                OFFICIAL SITE OF BENISOHA FUSION LLP
               </span>
             </div>
 
@@ -62,13 +62,13 @@ export default function Hero() {
                 color: "#1A1A1A",
               }}
             >
-              Building the{" "}
+              Smart Android{" "}
               <span className="italic font-light" style={{ color: "#fff", textShadow: "0 1px 4px rgba(0,0,0,0.18)" }}>
-                Digital
+                Applications
               </span>
-              <br />&amp; Physical{" "}
+              <br />&amp; 11 kW Power{" "}
               <span className="italic font-light" style={{ color: "#fff", textShadow: "0 1px 4px rgba(0,0,0,0.18)" }}>
-                Future
+                Setups
               </span>
             </h1>
 
@@ -76,8 +76,7 @@ export default function Hero() {
               className="text-sm sm:text-base md:text-lg leading-relaxed text-charcoal/80 mb-8 sm:mb-10 max-w-lg font-medium"
               style={{ fontFamily: "var(--font-dm-sans)" }}
             >
-              From enterprise software and intelligent automation to city-scale electrical
-              infrastructure — we deliver precision, quality, and reliability at every scale.
+              We engineer globally trusted Android utilities like Clone Master - Multi Dual Space, alongside delivering professional high-power (11,000 watt) equipment installation services across our local region.
             </p>
 
             {/* Primary CTAs */}
@@ -87,14 +86,14 @@ export default function Hero() {
                 className="touch-target flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5 bg-charcoal text-white text-[11px] sm:text-xs tracking-widest uppercase font-bold hover:bg-charcoal-soft hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:-translate-y-0.5 transition-all duration-300"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
-                Our Services
+                OUR SERVICES
               </a>
               <a
                 href="#contact"
                 className="touch-target flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-charcoal text-charcoal text-[11px] sm:text-xs tracking-widest uppercase font-bold hover:bg-charcoal hover:text-white transition-all duration-300"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
-                Work With Us
+                CONTACT US
               </a>
             </div>
 
@@ -104,7 +103,7 @@ export default function Hero() {
                 className="text-[10px] tracking-[0.2em] uppercase text-charcoal/50 font-bold mb-3"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
-                Download Our App
+                DOWNLOAD FLAGSHIP APPLICATIONS
               </p>
               <a
                 href="/applications"
@@ -138,7 +137,7 @@ export default function Hero() {
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-5 sm:gap-8">
-              {["Quality Assured", "Safety First", "On-Time Delivery"].map((item) => (
+              {["GLOBAL APP USERS", "CHURU, RAJASTHAN", "HIGH-POWER WIRING"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-charcoal inline-block flex-shrink-0" />
                   <span
@@ -165,9 +164,9 @@ export default function Hero() {
                   </svg>
                 </div>
                 <p className="text-xs tracking-[0.25em] uppercase text-charcoal font-bold"
-                  style={{ fontFamily: "var(--font-dm-sans)" }}>Power &amp; Code</p>
+                  style={{ fontFamily: "var(--font-dm-sans)" }}>APPLICATIONS &amp; POWER</p>
                 <p className="text-[11px] text-charcoal/60 mt-1 tracking-wider font-medium"
-                  style={{ fontFamily: "var(--font-dm-sans)" }}>Where Tech Meets Infrastructure</p>
+                  style={{ fontFamily: "var(--font-dm-sans)" }}>Benisoha Fusion LLP</p>
               </div>
               {[0, 60, 120, 180, 240, 300].map((deg) => (
                 <div

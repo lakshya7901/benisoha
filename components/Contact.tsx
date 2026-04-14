@@ -62,29 +62,30 @@ export default function Contact() {
             <div className="reveal flex items-center gap-3 mb-6">
               <span className="w-8 h-[2px] bg-gold-500" />
               <span className="text-xs tracking-[0.3em] uppercase text-gold-400 font-bold"
-                style={{ fontFamily: "var(--font-dm-sans)" }}>Get In Touch</span>
+                style={{ fontFamily: "var(--font-dm-sans)" }}>CONTACT & SUPPORT</span>
             </div>
 
             <h2 className="reveal mb-6 leading-tight text-white"
               style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 500 }}>
-              Let's Build{" "}
-              <span className="italic font-light text-gold-400">Something</span>
-              <br />Great Together
+              Connect with{" "}
+              <span className="italic font-light text-gold-400"><br />Benisoha Fusion </span>
+              LLP
             </h2>
 
             <p className="reveal text-white/70 leading-relaxed mb-10 text-sm font-medium"
               style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.15s" }}>
-              Whether you need a software solution, automation pipeline, or infrastructure
-              support — our team is ready to scope your project and deliver with precision.
+                For app support, please provide your device model, Android version, and a short explanation of the issue. For 11 kW high-power work, share your basic location and load requirements. We reply to all genuine messages as soon as possible.
             </p>
 
             <div className="reveal space-y-6" style={{ transitionDelay: "0.2s" }}>
               {[
-                { label: "Email", value: "hello@benisohafusion.com",
+                { label: "Email", value: "clonemaster.help@gmail.com",
                   icon: <path d="M2 5L10 11L18 5M2 5H18V15H2V5Z" stroke="#f5d60c" strokeWidth="1.5"/> },
                 { label: "Phone", value: "+91 98765 43210",
                   icon: <path d="M3 3h4l2 5-2.5 1.5A11 11 0 0011.5 13.5L13 11l5 2v4a1 1 0 01-1 1C7 18 2 13 2 4a1 1 0 011-1z" stroke="#f5d60c" strokeWidth="1.5"/> },
-                { label: "Location", value: "India",
+                { label: "Location", value: "Churu, Rajasthan, India",
+                  icon: <><circle cx="10" cy="8" r="3" stroke="#f5d60c" strokeWidth="1.5"/><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#f5d60c" strokeWidth="1.5"/></> },
+                { label: "TELEGRAM", value: "@cmasterpvt",
                   icon: <><circle cx="10" cy="8" r="3" stroke="#f5d60c" strokeWidth="1.5"/><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#f5d60c" strokeWidth="1.5"/></> },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
@@ -152,7 +153,7 @@ export default function Contact() {
                       <select name="service" value={formData.service} onChange={handleChange}
                         className="w-full border-b-2 border-charcoal/30 focus:border-charcoal outline-none bg-transparent py-2.5 text-sm text-charcoal font-medium transition-colors appearance-none cursor-pointer"
                         style={{ fontFamily: "var(--font-dm-sans)" }}>
-                        <option value="">Select a service...</option>
+                        <option value="">App Support or Power Installation...</option>
                         <option>Application Development</option>
                         <option>Automation Solutions</option>
                         <option>Digital Support</option>
@@ -167,7 +168,7 @@ export default function Contact() {
                       style={{ fontFamily: "var(--font-dm-sans)" }}>Project Details *</label>
                     <textarea name="message" required rows={4} value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us about your project, timeline, and requirements..."
+                      placeholder="Please explain your app issue (include screenshots if emailing directly) or describe your preferred timing and location for high-power installation work..."
                       className="w-full border-b-2 border-charcoal/30 focus:border-charcoal outline-none bg-transparent py-2.5 text-sm text-charcoal font-medium transition-colors resize-none placeholder:text-charcoal/40"
                       style={{ fontFamily: "var(--font-dm-sans)" }} />
                   </div>
@@ -198,7 +199,7 @@ export default function Contact() {
               className="text-[10px] tracking-[0.3em] uppercase text-gold-400 font-bold"
               style={{ fontFamily: "var(--font-dm-sans)" }}
             >
-              Find Us
+              OUR LOCATION
             </span>
           </div>
 
@@ -208,7 +209,7 @@ export default function Contact() {
               {/* Gold top bar */}
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-gold-500 z-10" />
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823357!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28104.138022455423!2d74.94619817854282!3d28.297801504321637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39136200b18a66a3%3A0x3e487bf6934c8306!2sChuru%2C%20Rajasthan%20331001!5e0!3m2!1sen!2sin!4v1776182170229!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 width="100%"
                 height="360"
                 style={{ border: 0, display: "block" }}
@@ -235,7 +236,7 @@ export default function Contact() {
                 <div className="flex flex-col">
                   <h3 className="text-white leading-none mt-2" 
                       style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.5rem, 3vw, 3.5rem)", fontWeight: 500 }}>
-                    Visit <br/><span className="italic font-light text-gold-400">Us</span>
+                    Based in <br/><span className="italic font-light text-gold-400">Churu</span>
                   </h3>
                 </div>
               </div>

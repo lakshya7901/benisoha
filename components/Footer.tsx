@@ -97,22 +97,20 @@ export default function Footer() {
                     letterSpacing: "0.02em",
                   }}
                 >
-                  Benisoha Fusion
+                  Benisoha Fusion LLP
                 </div>
                 <div
                   className="uppercase text-charcoal/70 font-black tracking-[0.25em] mt-0.5"
                   style={{ fontFamily: "var(--font-dm-sans)", fontSize: "0.62rem" }}
                 >
-                  Software &amp; Infrastructure
+                  ANDROID APPS & POWER INSTALLATIONS
                 </div>
               </div>
             </div>
 
             <p className="text-sm text-charcoal/80 leading-relaxed max-w-sm font-medium mb-0 sm:mb-7"
               style={{ fontFamily: "var(--font-dm-sans)" }}>
-              A premier software and technical services company delivering application
-              development, automation, and city electrical infrastructure projects with
-              quality, safety, and precision.
+                Official site of Benisoha Fusion LLP. We engineer globally trusted Android utilities and provide professional high-power (11,000 watt) equipment installation services across our local region.
             </p>
 
             {/* Hidden on mobile, visible on tablet/desktop */}
@@ -126,7 +124,7 @@ export default function Footer() {
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold mb-4 sm:mb-5"
               style={{ fontFamily: "var(--font-dm-sans)" }}>Services</h4>
             <ul className="space-y-2.5 sm:space-y-3">
-              {["App Development", "Automation", "Digital Support", "Power Line Install", "Pole Erection"].map((s) => (
+              {["Android App Development", "Google Play Publishing", "App Store Optimization", "11 kW Power Setups", "Heavy Load Connections"].map((s) => (
                 <li key={s} className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-charcoal flex-shrink-0" />
                   <span className="text-sm text-charcoal/80 font-semibold"
@@ -182,7 +180,7 @@ export default function Footer() {
             <span className="w-4 h-[2px] bg-charcoal/30" />
             <span className="text-[10px] sm:text-xs text-charcoal/60 font-bold tracking-wider uppercase"
               style={{ fontFamily: "var(--font-dm-sans)" }}>
-              Quality · Safety · Timely Execution
+              GLOBALLY USED APPS · LOCAL POWER INFRASTRUCTURE
             </span>
             <span className="w-4 h-[2px] bg-charcoal/30" />
           </div>

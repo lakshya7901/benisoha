@@ -3,17 +3,17 @@
 import { useEffect, useRef } from "react";
 
 const softwareServices = [
-  { title: "Application Development", desc: "Custom web, mobile, and enterprise applications built with modern stacks. From concept to deployment." },
-  { title: "Automation Solutions", desc: "Business process automation, workflow orchestration, RPA, and intelligent automation pipelines." },
-  { title: "Digital Support", desc: "Ongoing technical support, system maintenance, performance monitoring, and rapid issue resolution." },
-  { title: "Cloud & DevOps", desc: "Cloud architecture, CI/CD pipelines, infrastructure management and scalable deployment strategies." },
+  { title: "Android Application Development", desc: "End-to-end design and development of Android applications, including our flagship utility, Clone Master - Multi Dual Space." },
+  { title: "Google Play Publishing", desc: "Comprehensive deployment, publishing, and ongoing maintenance of applications on the Google Play ecosystem." },
+  { title: "Maintenance & Tuning", desc: "Dedicated bug fixing, continuous performance tuning, and rolling out long-term updates for a seamless user experience." },
+  { title: "App Store Optimization (ASO)", desc: "Strategic App Store Optimization and comprehensive listing management to improve app visibility and organic user acquisition." },
 ];
 
 const infraServices = [
-  { title: "Power Line Installation", desc: "Professional HT/LT power line laying and erection for city-wide electrical distribution networks." },
-  { title: "Pole Erection Projects", desc: "Concrete and steel pole installation with precise foundation work for the Electricity Department." },
-  { title: "Electrical Infrastructure", desc: "End-to-end city electrical infrastructure projects with adherence to safety codes and regulations." },
-  { title: "Site Safety & Compliance", desc: "Rigorous safety planning, equipment checks, and compliance with statutory electrical standards." },
+  { title: "Heavy Load Connections", desc: "Professional setup and installation of high-power electrical equipment, specializing in capacities around 11,000 watts." },
+  { title: "Wiring & Safety Checks", desc: "Executing proper wiring protocols alongside rigorous safety checks and basic testing to ensure secure and reliable operations." },
+  { title: "Project-Wise Planning", desc: "Delivering structured, project-specific planning customized to meet the exact requirements of your high-power load setup." },
+  { title: "Custom On-Ground Services", desc: "Flexible, on-ground service delivery in our local region, customized to fit your actual physical infrastructure needs." },
 ];
 
 function ServiceCard({ title, desc, dark, delay }: { title: string; desc: string; dark?: boolean; delay: number }) {
@@ -67,13 +67,13 @@ export default function Services() {
           <div className="reveal flex items-center gap-3 mb-4">
             <span className="w-6 h-[2px] bg-charcoal" />
             <span className="text-[10px] tracking-[0.3em] uppercase text-charcoal font-bold"
-              style={{ fontFamily: "var(--font-dm-sans)" }}>Technology Services</span>
+              style={{ fontFamily: "var(--font-dm-sans)" }}>SOFTWARE SERVICES</span>
           </div>
           <h3 className="reveal text-charcoal mb-8 leading-tight"
             style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 600 }}>
-            Software &amp;{" "}
+            Android Apps{" "}
             <span className="italic font-light text-white" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.15)" }}>
-              Digital
+              Development
             </span>
           </h3>
           <div className="grid gap-4">
@@ -88,12 +88,12 @@ export default function Services() {
           <div className="reveal flex items-center gap-3 mb-4">
             <span className="w-6 h-[2px] bg-gold-500" />
             <span className="text-[10px] tracking-[0.3em] uppercase text-gold-400 font-bold"
-              style={{ fontFamily: "var(--font-dm-sans)" }}>City-Scale Projects</span>
+              style={{ fontFamily: "var(--font-dm-sans)" }}>LOCAL INSTALLATION PROJECTScts</span>
           </div>
           <h3 className="reveal text-white mb-8 leading-tight"
             style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 600 }}>
-            Electrical{" "}
-            <span className="italic font-light text-gold-400">Infrastructure</span>
+            High-Power Setup{" "}
+            <span className="italic font-light text-gold-400">(≈11 kW)  </span>
           </h3>
           <div className="grid gap-4">
             {infraServices.map((s, i) => (

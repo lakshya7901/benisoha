@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 
 const pillars = [
   {
-    title: "Quality Work",
-    desc: "Every project is executed with meticulous attention to detail, meeting the highest industry standards.",
+    title: "App Development & ASO",
+    desc: "Designing, developing, and maintaining Android applications on Google Play with comprehensive listing management.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
         <path d="M20 4L23.5 14.5H34.5L26 21.5L29.5 32L20 25L10.5 32L14 21.5L5.5 14.5H16.5L20 4Z"
@@ -14,8 +14,8 @@ const pillars = [
     ),
   },
   {
-    title: "Safety First",
-    desc: "We adhere to strict safety protocols across all operations — from coding practices to on-site electrical work.",
+    title: "11 kW Power Installations",
+    desc: "Executing heavy load electrical connections and high-power equipment setups with targeted, project-wise planning.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
         <path d="M20 4L34 10V22C34 29 27 35 20 37C13 35 6 29 6 22V10L20 4Z"
@@ -25,8 +25,8 @@ const pillars = [
     ),
   },
   {
-    title: "Timely Execution",
-    desc: "We respect deadlines. Project timelines are planned carefully and monitored throughout delivery.",
+    title: "Safety Checks & Testing",
+    desc: "Implementing proper wiring protocols and conducting essential basic testing to ensure safety across all physical installations.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
         <circle cx="20" cy="20" r="15" stroke="#f5d60c" strokeWidth="1.8" fill="rgba(245,214,12,0.15)" />
@@ -75,23 +75,18 @@ export default function About() {
           <div>
             <h2 className="reveal mb-8 leading-tight"
               style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.2rem, 4vw, 3.5rem)", fontWeight: 500, color: "#1A1A1A" }}>
-              A Dual-Force Company —{" "}
-              <br /><span className="italic font-light text-brown-dark">Software &amp; Infrastructure</span>
+              Two Dedicated Areas —{" "}
+              <br /><span className="italic font-light text-brown-dark">Android Applications &amp; High-Power Setups</span>
             </h2>
 
             <p className="reveal text-gray-800 leading-relaxed mb-6 text-base font-medium"
               style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.1s" }}>
-              We are a software and technical services company delivering cutting-edge
-              application development, intelligent automation solutions, and comprehensive
-              digital support. Our engineering team brings deep technology expertise with a
-              passion for elegant, scalable solutions.
+                We manage the complete lifecycle of Android applications—from initial design and development to Google Play publishing. Our digital focus remains on continuous performance tuning, bug fixing, and App Store Optimization (ASO) to ensure reliable, long-term app utility.
             </p>
 
             <p className="reveal text-gray-700 leading-relaxed mb-10 text-base font-medium"
               style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.2s" }}>
-              Beyond digital, we are also trusted by the Electricity Department for
-              city-wide electrical infrastructure — power line installation and pole
-              erection projects — bringing the same precision from software to physical delivery.
+                Beyond software, we specialize in high-power (≈11 kW) electrical and equipment installation projects. We handle heavy load connections and ensure proper wiring with rigorous safety checks, delivering project-wise planning customized to your actual on-ground requirements.
             </p>
 
             {/* Divider */}
@@ -102,7 +97,7 @@ export default function About() {
 
             <blockquote className="reveal border-l-4 border-gold-500 pl-6 text-xl italic text-charcoal"
               style={{ fontFamily: "var(--font-cormorant)", fontWeight: 500, transitionDelay: "0.3s" }}>
-              &ldquo;We don&apos;t just build systems — we build the infrastructure that powers communities.&rdquo;
+              &ldquo;Delivering digital utility to users worldwide, while providing trusted high-power infrastructure to our local region.&rdquo;
             </blockquote>
           </div>
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const androidApps = [
   {
-    title: "Clone Master – Multi Dual Space ",
+    title: "Clone Master - Multi Dual Space ",
     desc: "Run multiple accounts of your apps on one Android device. Separate work and personal apps, or use dual accounts for games, social media, and more.",
     tags: ["Android", "Tools", "Multi-Space"],
     link: "https://play.google.com/store",

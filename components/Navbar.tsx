@@ -12,10 +12,10 @@ const navLinks = [
 ];
 
 const searchableApps = [
-  { title: "EcoTrack Mobile",      category: "Android App",   href: "/applications#ecotrack-mobile" },
-  { title: "TaskMaster Pro",       category: "Android App",   href: "/applications#taskmaster-pro" },
-  { title: "Client Portal CRM",    category: "Web Platform",  href: "/applications#client-portal-crm" },
-  { title: "E-Commerce Storefront",category: "Web Platform",  href: "/applications#e-commerce-storefront" },
+  { title: "Clone Master - Multi Dual Space",      category: "ANDROID APPLICATIONS",   href: "/applications#clone-master---multi-dual-space" },
+  { title: "Future Utility Apps",       category: "ANDROID APPLICATIONS",   href: "/applications#future-utility-apps" },
+  { title: "Full-Stack Web Development",    category: "WEB PLATFORMS",  href: "/applications#full-stack-web-development" },
+  { title: "Intelligent Backend Systems",category: "WEB PLATFORMS",  href: "/applications#intelligent-backend-systems" },
 ];
 
 export default function Navbar() {

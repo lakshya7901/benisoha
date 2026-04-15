@@ -148,7 +148,9 @@ export default function Footer() {
                 { label: "Services",     href: "/#services" },
                 { label: "Applications", href: "/applications" },
                 { label: "Projects",     href: "/#projects" },
-                { label: "Contact",      href: "/#contact" },
+                // { label: "Contact",      href: "/#contact" },
+                { label: "Disclaimer",      href: "/disclaimer" },
+                { label: "Privacy Policy",      href: "/privacy-policy" },
               ].map((link) => (
                 <li key={link.label} className="border-b border-charcoal/10 last:border-0">
                   <a

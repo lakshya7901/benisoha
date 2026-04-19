@@ -146,7 +146,7 @@ export default function Footer() {
               {[
                 { label: "About",        href: "/#about" },
                 { label: "Services",     href: "/#services" },
-                { label: "Applications", href: "/applications" },
+                { label: "Apps", href: "/applications" },
                 { label: "Projects",     href: "/#projects" },
                 // { label: "Contact",      href: "/#contact" },
                 { label: "Disclaimer",      href: "/disclaimer" },

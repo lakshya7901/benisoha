@@ -81,12 +81,12 @@ export default function About() {
 
             <p className="reveal text-gray-800 leading-relaxed mb-6 text-base font-medium"
               style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.1s" }}>
-                Benisoha Fusion LLP is a dual-service company working in Android applications and electrical infrastructure. We develop apps like Clone Master – Multi Dual Space.
+                Benisoha Fusion LLP is a dual-service company working in Android applications and Electrical Infrastructure. We develop apps like Clone Master – Multi Dual Space.
             </p>
 
             <p className="reveal text-gray-700 leading-relaxed mb-10 text-base font-medium"
               style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.2s" }}>
-                We provide GSS work, LT line work, 11kV line work, 33kV line work, 220 line work, transformer installation, DTR work, and pole installation services.
+                We provide GSS work, LT line work, 11kV line work, 33kV line work, 220 line work, Transformer Installation, DTR work, and Pole Installation services.
             </p>
 
             {/* Divider */}

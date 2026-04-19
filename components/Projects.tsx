@@ -6,38 +6,38 @@ const projects = [
   {
     category: "APPLICATION",
     title: "Clone Master - Multi Dual Space",
-    desc: "Run multiple accounts of your apps on a single Android device. Designed to separate work and personal applications, or run dual accounts for gaming and social media.",
-    tags: ["Tools", "Multi-Space", "com.cmaster.cloner"],
+    desc: "Architected to securely isolate app instances, enabling users to seamlessly run multiple accounts for work, gaming, and social media on a single Android device.",
+    tags: ["Virtualization", "Multi-Account", "Productivity"],
   },
   {
     category: "APPLICATION",
     title: "Tool & Utility Applications",
-    desc: "We are actively architecting additional Android utilities. Future releases will be published directly to our portfolio with Google Play and direct APK download access.",
-    tags: ["Utility", "In Development", "Android"],
+    desc: "Engineering a robust suite of Android utilities designed for maximum device efficiency. Future releases will be deployed via Google Play and direct APK access.",
+    tags: ["System Tools", "Android Dev", "Optimization"],
   },
   {
     category: "AUTOMATION",
     title: "Automation Apps",
-    desc: "Professional installation of heavy load electrical connections, specializing in capacities around 11,000 watts (11 kW) for our local region.",
-    tags: ["11 kW", "Heavy Load", "Local Install"],
+    desc: "Developing intelligent, script-driven automation applications designed to streamline repetitive mobile tasks, optimize workflows, and enhance overall productivity.",
+    tags: ["Task Automation", "Scripting", "Workflow Efficiency"],
   },
     {
     category: "POWER SETUP",
     title: "LT / HT Line Work",
-    desc: "Executing precise wiring protocols accompanied by rigorous safety checks and basic operational testing to ensure secure, high-capacity setups.",
-    tags: ["Safety Audit", "Wiring", "Foundation Work"],
+    desc: "Executing precision wiring and installation of Low Tension (LT) and High Tension (HT) lines, ensuring robust power distribution and strict adherence to safety protocols.",
+    tags: ["Power Distribution", "Wiring Protocols", "Safety Compliance"],
   },
     {
     category: "POWER SETUP",
     title: "Pole Installation Work",
-    desc: "Executing precise wiring protocols accompanied by rigorous safety checks and basic operational testing to ensure secure, high-capacity setups.",
-    tags: ["Safety Audit", "Wiring", "Foundation Work"],
+    desc: "Delivering structurally sound foundation and erection services for electrical poles, engineered to support resilient and high-capacity transmission networks.",
+    tags: ["Infrastructure", "Foundation Work", "Grid Support"],
   },
     {
     category: "POWER SETUP",
     title: "Transformer & DTR Work",
-    desc: "Executing precise wiring protocols accompanied by rigorous safety checks and basic operational testing to ensure secure, high-capacity setups.",
-    tags: ["Safety Audit", "Wiring", "Foundation Work"],
+    desc: "Expert installation and commissioning of Distribution Transformers (DTR), ensuring optimal voltage regulation and secure, high-capacity electrical setups.",
+    tags: ["Voltage Regulation", "Heavy Load", "Commissioning"],
   },
 ];
 
@@ -45,11 +45,11 @@ const categories = ["ALL", "APPLICATION", "AUTOMATION", "POWER SETUP"];
 
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("ALL");
   const [sectionVisible, setSectionVisible] = useState(false);
   const [cardKey, setCardKey] = useState(0);
 
-  const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
+  const filtered = filter === "ALL" ? projects : projects.filter((p) => p.category === filter);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -109,14 +109,14 @@ export default function Projects() {
 
               {/* Top bar color by category */}
               <div className={`h-1 ${
-                project.category === "Application" ? "bg-charcoal" :
-                project.category === "Automation" ? "bg-gold-600" : "bg-charcoal-soft"
+                project.category === "APPLICATION" ? "bg-charcoal" :
+                project.category === "AUTOMATION" ? "bg-gold-600" : "bg-charcoal-soft"
               }`} />
 
               <div className="p-6">
                 <span className={`inline-block px-3 py-1 text-[10px] tracking-widest uppercase rounded-sm mb-4 font-bold ${
-                  project.category === "Application" ? "bg-charcoal text-white" :
-                  project.category === "Automation" ? "bg-gold-500 text-charcoal" :
+                  project.category === "APPLICATION" ? "bg-charcoal text-white" :
+                  project.category === "AUTOMATION" ? "bg-gold-500 text-charcoal" :
                   "bg-gray-100 text-gray-700"
                 }`} style={{ fontFamily: "var(--font-dm-sans)" }}>
                   {project.category}

@@ -76,7 +76,7 @@ export default function Hero() {
               className="text-sm sm:text-base md:text-lg leading-relaxed text-charcoal/80 mb-8 sm:mb-10 max-w-lg font-medium"
               style={{ fontFamily: "var(--font-dm-sans)" }}
             >
-              We provide Android app development and electrical infrastructure work including LT line, 11kV, 33kV, 220 line, DTR, transformer, pole installation, and GSS installation.
+              We provide Android app development and Electrical Infrastructure work including LT line, 11kV, 33kV, 220 line, DTR, Transformer, Pole Installation, and GSS Installation.
             </p>
 
             {/* Primary CTAs */}

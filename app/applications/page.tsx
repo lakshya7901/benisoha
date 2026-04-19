@@ -14,6 +14,9 @@ const androidApps = [
     tags: ["Android", "Tools", "Multi-Space"],
     link: "https://play.google.com/store/apps/details?id=com.cmaster.cloner",
   },
+];
+
+const proApps = [
   {
     title: "Clone Master - Multi Dual Space Pro",
     desc: "We are actively building additional Android utilities. When a new application is published, it will appear here with official Play Store and direct APK download links.",
@@ -21,6 +24,7 @@ const androidApps = [
     link: "https://clone-master.en.uptodown.com/android",
   },
 ];
+
 
 const websites = [
   {
@@ -98,7 +102,7 @@ export default function ApplicationsPage() {
               <span className="w-6 sm:w-8 h-[2px] bg-gold-500 flex-shrink-0" />
               <h2 className="text-base sm:text-xl font-bold text-white uppercase tracking-widest"
                 style={{ fontFamily: "var(--font-dm-sans)" }}>
-                ANDROID APPLICATIONS
+                ANDROID APPS
               </h2>
               <div className="flex-1 h-[1px] bg-white/08" />
               {/* Android icon badge */}
@@ -108,8 +112,7 @@ export default function ApplicationsPage() {
                 </svg>
               </div>
             </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {androidApps.map((app) => (
                 <div
                   key={app.title}
@@ -149,6 +152,68 @@ export default function ApplicationsPage() {
                   >
                     <PlayIcon />
                     Download on Play Store
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pro Android Apps */}
+          <div className="mb-14 sm:mb-20">
+            <div className="flex items-center gap-3 mb-6 sm:mb-10">
+              <span className="w-6 sm:w-8 h-[2px] bg-gold-500 flex-shrink-0" />
+              <h2 className="text-base sm:text-xl font-bold text-white uppercase tracking-widest"
+                style={{ fontFamily: "var(--font-dm-sans)" }}>
+                PRO ANDROID APPS
+              </h2>
+              <div className="flex-1 h-[1px] bg-white/08" />
+              {/* Android icon badge */}
+              <div className="w-8 h-8 bg-gold-500 flex items-center justify-center flex-shrink-0">
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-charcoal">
+                  <path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C14.15 1.23 13.1 1 12 1c-1.1 0-2.15.23-3.09.63L7.43.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.3 1.3C6.1 3.26 5 5.01 5 7h14c0-1.99-1.1-3.74-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/>
+                </svg>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {proApps.map((app) => (
+                <div
+                  key={app.title}
+                  id={generateId(app.title)}
+                  className="border-2 border-white/10 p-5 sm:p-6 hover:border-gold-500 hover:bg-white/[0.03] transition-all duration-300 flex flex-col group scroll-mt-28"
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <h3
+                      className="text-xl font-bold text-white group-hover:text-gold-400 transition-colors leading-snug"
+                      style={{ fontFamily: "var(--font-cormorant)" }}
+                    >
+                      {app.title}
+                    </h3>
+                    <div className="w-8 h-8 bg-gold-500/10 border border-gold-500/30 flex items-center justify-center flex-shrink-0 ml-2">
+                      <PlayIcon />
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-white/65 mb-5 flex-grow font-medium leading-relaxed"
+                    style={{ fontFamily: "var(--font-dm-sans)" }}>
+                    {app.desc}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {app.tags.map((tag) => (
+                      <span key={tag} className="text-[10px] tracking-wider text-charcoal bg-gold-500 px-2.5 py-0.5 font-bold">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={app.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="touch-target mt-auto flex items-center justify-center gap-2.5 bg-gold-500 text-charcoal py-3 px-4 hover:bg-white transition-all duration-300 text-xs tracking-widest uppercase font-bold"
+                  >
+                    <PlayIcon />
+                    Direct Download
                   </a>
                 </div>
               ))}

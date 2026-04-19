@@ -13,7 +13,7 @@ const navLinks = [
 
 const searchableApps = [
   { title: "Clone Master - Multi Dual Space",      category: "ANDROID APPLICATIONS",   href: "/applications#clone-master---multi-dual-space" },
-  { title: "Future Utility Apps",       category: "ANDROID APPLICATIONS",   href: "/applications#future-utility-apps" },
+  { title: "Clone Master - Multi Dual Space Pro",       category: "ANDROID APPLICATIONS",   href: "/applications#clone-master---multi-dual-space-pro" },
   { title: "Full-Stack Web Development",    category: "WEB PLATFORMS",  href: "/applications#full-stack-web-development" },
   { title: "Intelligent Backend Systems",category: "WEB PLATFORMS",  href: "/applications#intelligent-backend-systems" },
 ];
@@ -111,7 +111,7 @@ export default function Navbar() {
               className={`text-[10px] tracking-[0.28em] uppercase font-black mt-0.5 ${subTextColor}`}
               style={{ fontFamily: "var(--font-dm-sans)", fontSize: "0.6rem" }}
             >
-              Software &amp; Infrastructure
+              Software &amp; Electrical
             </div>
           </div>
         </Link>

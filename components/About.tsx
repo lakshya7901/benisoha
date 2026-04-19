@@ -14,7 +14,7 @@ const pillars = [
     ),
   },
   {
-    title: "11 kW Power Installations",
+    title: "Electrical Installations",
     desc: "Executing heavy load electrical connections and high-power equipment setups with targeted, project-wise planning.",
     icon: (
       <svg viewBox="0 0 40 40" className="w-7 h-7" fill="none">
@@ -81,12 +81,12 @@ export default function About() {
 
             <p className="reveal text-gray-800 leading-relaxed mb-6 text-base font-medium"
               style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.1s" }}>
-                We manage the complete lifecycle of Android applications—from initial design and development to Google Play publishing. Our digital focus remains on continuous performance tuning, bug fixing, and App Store Optimization (ASO) to ensure reliable, long-term app utility.
+                Benisoha Fusion LLP is a dual-service company working in Android applications and electrical infrastructure. We develop apps like Clone Master – Multi Dual Space.
             </p>
 
             <p className="reveal text-gray-700 leading-relaxed mb-10 text-base font-medium"
               style={{ fontFamily: "var(--font-dm-sans)", transitionDelay: "0.2s" }}>
-                Beyond software, we specialize in high-power (≈11 kW) electrical and equipment installation projects. We handle heavy load connections and ensure proper wiring with rigorous safety checks, delivering project-wise planning customized to your actual on-ground requirements.
+                We provide GSS work, LT line work, 11kV line work, 33kV line work, 220 line work, transformer installation, DTR work, and pole installation services.
             </p>
 
             {/* Divider */}

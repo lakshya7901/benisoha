@@ -103,14 +103,14 @@ export default function Footer() {
                   className="uppercase text-charcoal/70 font-black tracking-[0.25em] mt-0.5"
                   style={{ fontFamily: "var(--font-dm-sans)", fontSize: "0.62rem" }}
                 >
-                  ANDROID APPS & POWER INSTALLATIONS
+                  Software & Electrical
                 </div>
               </div>
             </div>
 
             <p className="text-sm text-charcoal/80 leading-relaxed max-w-sm font-medium mb-0 sm:mb-7"
               style={{ fontFamily: "var(--font-dm-sans)" }}>
-                Official site of Benisoha Fusion LLP. We engineer globally trusted Android utilities and provide professional high-power (11,000 watt) equipment installation services across our local region.
+                Android apps and electrical infrastructure company working in GSS, LT/HT line, transformer and automation apps.
             </p>
 
             {/* Hidden on mobile, visible on tablet/desktop */}

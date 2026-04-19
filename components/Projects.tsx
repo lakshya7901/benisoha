@@ -4,32 +4,44 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
-    category: "ANDROID",
+    category: "APPLICATION",
     title: "Clone Master - Multi Dual Space",
     desc: "Run multiple accounts of your apps on a single Android device. Designed to separate work and personal applications, or run dual accounts for gaming and social media.",
     tags: ["Tools", "Multi-Space", "com.cmaster.cloner"],
   },
   {
-    category: "ANDROID",
-    title: "Future Utility Applications",
+    category: "APPLICATION",
+    title: "Tool & Utility Applications",
     desc: "We are actively architecting additional Android utilities. Future releases will be published directly to our portfolio with Google Play and direct APK download access.",
     tags: ["Utility", "In Development", "Android"],
   },
   {
-    category: "POWER SETUP",
-    title: "High-Power Equipment Setup",
+    category: "AUTOMATION",
+    title: "Automation Apps",
     desc: "Professional installation of heavy load electrical connections, specializing in capacities around 11,000 watts (11 kW) for our local region.",
     tags: ["11 kW", "Heavy Load", "Local Install"],
   },
     {
     category: "POWER SETUP",
-    title: "Infrastructure Wiring & Safety",
+    title: "LT / HT Line Work",
+    desc: "Executing precise wiring protocols accompanied by rigorous safety checks and basic operational testing to ensure secure, high-capacity setups.",
+    tags: ["Safety Audit", "Wiring", "Foundation Work"],
+  },
+    {
+    category: "POWER SETUP",
+    title: "Pole Installation Work",
+    desc: "Executing precise wiring protocols accompanied by rigorous safety checks and basic operational testing to ensure secure, high-capacity setups.",
+    tags: ["Safety Audit", "Wiring", "Foundation Work"],
+  },
+    {
+    category: "POWER SETUP",
+    title: "Transformer & DTR Work",
     desc: "Executing precise wiring protocols accompanied by rigorous safety checks and basic operational testing to ensure secure, high-capacity setups.",
     tags: ["Safety Audit", "Wiring", "Foundation Work"],
   },
 ];
 
-const categories = ["ALL", "ANDROID", "WEB APPLICATIONS", "POWER SETUP"];
+const categories = ["ALL", "APPLICATION", "AUTOMATION", "POWER SETUP"];
 
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);

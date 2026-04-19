@@ -62,13 +62,13 @@ export default function Hero() {
                 color: "#1A1A1A",
               }}
             >
-              Smart Android{" "}
+              Android{" "}
               <span className="italic font-light" style={{ color: "#fff", textShadow: "0 1px 4px rgba(0,0,0,0.18)" }}>
-                Applications
+                Apps
               </span>
-              <br />&amp; 11 kW Power{" "}
+              <br />&amp; Electrical{" "}
               <span className="italic font-light" style={{ color: "#fff", textShadow: "0 1px 4px rgba(0,0,0,0.18)" }}>
-                Setups
+                Infrastructure
               </span>
             </h1>
 
@@ -76,7 +76,7 @@ export default function Hero() {
               className="text-sm sm:text-base md:text-lg leading-relaxed text-charcoal/80 mb-8 sm:mb-10 max-w-lg font-medium"
               style={{ fontFamily: "var(--font-dm-sans)" }}
             >
-              We engineer globally trusted Android utilities like Clone Master - Multi Dual Space, alongside delivering professional high-power (11,000 watt) equipment installation services across our local region.
+              We provide Android app development and electrical infrastructure work including LT line, 11kV, 33kV, 220 line, DTR, transformer, pole installation, and GSS installation.
             </p>
 
             {/* Primary CTAs */}

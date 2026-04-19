@@ -3,17 +3,25 @@
 import { useEffect, useRef } from "react";
 
 const softwareServices = [
-  { title: "Android Application Development", desc: "End-to-end design and development of Android applications, including our flagship utility, Clone Master - Multi Dual Space." },
-  { title: "Google Play Publishing", desc: "Comprehensive deployment, publishing, and ongoing maintenance of applications on the Google Play ecosystem." },
-  { title: "Maintenance & Tuning", desc: "Dedicated bug fixing, continuous performance tuning, and rolling out long-term updates for a seamless user experience." },
-  { title: "App Store Optimization (ASO)", desc: "Strategic App Store Optimization and comprehensive listing management to improve app visibility and organic user acquisition." },
+  { title: "Android App Development", desc: "Custom, scalable Android solutions engineered for peak performance and seamless user experiences." },
+  { title: "Tool & Utility Apps", desc: "Lightweight, high-utility applications designed to optimize daily workflows and solve specific problems." },
+  { title: "Automation Apps", desc: "Smart, script-driven automation solutions built to eliminate repetitive tasks and enhance efficiency." },
+  { title: "Play Store Publishing", desc: "End-to-end deployment services ensuring strict compliance and successful app store launches." },
+  { title: "App Updates & Maintenance", desc: "Continuous system monitoring, feature upgrades, and legacy code maintenance to keep your app future-ready." },
+  { title: "Clone & Dual Space Apps", desc: "Secure, optimized dual-space architectures engineered for running multiple account instances simultaneously." },
+  { title: "App Optimization & Support", desc: "Advanced performance tuning, memory management, and dedicated support to maximize application efficiency." },
+  { title: "App Testing & Bug Fixing", desc: "Rigorous QA testing and rapid vulnerability resolution to guarantee a flawless, crash-free product." },
 ];
 
 const infraServices = [
-  { title: "Heavy Load Connections", desc: "Professional setup and installation of high-power electrical equipment, specializing in capacities around 11,000 watts." },
-  { title: "Wiring & Safety Checks", desc: "Executing proper wiring protocols alongside rigorous safety checks and basic testing to ensure secure and reliable operations." },
-  { title: "Project-Wise Planning", desc: "Delivering structured, project-specific planning customized to meet the exact requirements of your high-power load setup." },
-  { title: "Custom On-Ground Services", desc: "Flexible, on-ground service delivery in our local region, customized to fit your actual physical infrastructure needs." },
+  { title: "HT & LT Line Installatio", desc: "End-to-end deployment of High and Low Tension lines, optimized for secure and compliant power distribution." },
+  { title: "11kV Line Work", desc: "Precision execution and safety-first wiring protocols for robust 11kV electrical networks." },
+  { title: "33kV Line Work", desc: "Custom-engineered planning and structured installation to meet high-capacity 33kV load requirements." },
+  { title: "220 Line Work", desc: "Advanced physical infrastructure setup designed for reliable high-voltage transmission and grid stability." },
+  { title: "DTR & Transformer Installation", desc: "Strategic placement and commissioning of Distribution Transformers for optimal, site-specific voltage regulation" },
+  { title: "Pole Erection", desc: "Structurally secure foundation and erection services built to support resilient electrical transmission grids." },
+  { title: "Transport & Site Execution", desc: "Streamlined logistics and precision on-ground project management for heavy electrical infrastructure." },
+  { title: "GSS Installation Work", desc: "Comprehensive Grid Substation (GSS) deployment to ensure seamless, uninterrupted power transmission." },
 ];
 
 function ServiceCard({ title, desc, dark, delay }: { title: string; desc: string; dark?: boolean; delay: number }) {
@@ -71,7 +79,7 @@ export default function Services() {
           </div>
           <h3 className="reveal text-charcoal mb-8 leading-tight"
             style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 600 }}>
-            Android Apps{" "}
+            Software & Application{" "}
             <span className="italic font-light text-white" style={{ textShadow: "0 1px 2px rgba(0,0,0,0.15)" }}>
               Development
             </span>
@@ -88,12 +96,12 @@ export default function Services() {
           <div className="reveal flex items-center gap-3 mb-4">
             <span className="w-6 h-[2px] bg-gold-500" />
             <span className="text-[10px] tracking-[0.3em] uppercase text-gold-400 font-bold"
-              style={{ fontFamily: "var(--font-dm-sans)" }}>LOCAL INSTALLATION PROJECTScts</span>
+              style={{ fontFamily: "var(--font-dm-sans)" }}>LOCAL INSTALLATION PROJECTS</span>
           </div>
           <h3 className="reveal text-white mb-8 leading-tight"
             style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 600 }}>
-            High-Power Setup{" "}
-            <span className="italic font-light text-gold-400">(≈11 kW)  </span>
+            GSS & Electrical{" "}
+            <span className="italic font-light text-gold-400">Infrastructure  </span>
           </h3>
           <div className="grid gap-4">
             {infraServices.map((s, i) => (

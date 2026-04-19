@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 
 const androidApps = [
   {
-    title: "Clone Master - Multi Dual Space ",
+    title: "Clone Master - Multi Dual Space",
     desc: "Run multiple accounts of your apps on one Android device. Separate work and personal apps, or use dual accounts for games, social media, and more.",
     tags: ["Android", "Tools", "Multi-Space"],
-    link: "https://play.google.com/store",
+    link: "https://play.google.com/store/apps/details?id=com.cmaster.cloner",
   },
   {
-    title: "Future Utility Apps",
+    title: "Clone Master - Multi Dual Space Pro",
     desc: "We are actively building additional Android utilities. When a new application is published, it will appear here with official Play Store and direct APK download links.",
     tags: ["Android", "Utility", "Coming Soon"],
-    link: "https://play.google.com/store",
+    link: "https://clone-master.en.uptodown.com/android",
   },
 ];
 
@@ -27,13 +27,13 @@ const websites = [
     title: "Full-Stack Web Development",
     desc: "Custom freelance web applications built with modern architectures. We prioritize high-performance UI/UX by leveraging the latest versions of modern frontend frameworks.",
     tags: ["Next.js", "Tailwind CSS", "MERN"],
-    link: "https://your-website.com",
+    link: "",
   },
   {
     title: "Intelligent Backend Systems",
     desc: "Exploring the intersection of full-stack web development and Generative AI, engineering robust backend solutions capable of handling complex automation and data pipelines.",
     tags: ["Python", "Django", "FastAPI"],
-    link: "https://your-website.com",
+    link: "",
   },
 ];
 

@@ -78,13 +78,13 @@ export default function Contact() {
 
             <div className="reveal space-y-6" style={{ transitionDelay: "0.2s" }}>
               {[
-                { label: "Email", value: "clonemaster.help@gmail.com",
+                { label: "Email", value: "benisoharj@gmail.com",
                   icon: <path d="M2 5L10 11L18 5M2 5H18V15H2V5Z" stroke="#f5d60c" strokeWidth="1.5"/> },
-                { label: "Phone", value: "+91 98765 43210",
+                { label: "Phone", value: "+91 8209888989",
                   icon: <path d="M3 3h4l2 5-2.5 1.5A11 11 0 0011.5 13.5L13 11l5 2v4a1 1 0 01-1 1C7 18 2 13 2 4a1 1 0 011-1z" stroke="#f5d60c" strokeWidth="1.5"/> },
                 { label: "Location", value: "Churu, Rajasthan, India",
                   icon: <><circle cx="10" cy="8" r="3" stroke="#f5d60c" strokeWidth="1.5"/><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#f5d60c" strokeWidth="1.5"/></> },
-                { label: "TELEGRAM", value: "@cmasterpvt",
+                { label: "TELEGRAM", value: "@benisoha",
                   icon: <><circle cx="10" cy="8" r="3" stroke="#f5d60c" strokeWidth="1.5"/><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z" stroke="#f5d60c" strokeWidth="1.5"/></> },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
@@ -129,9 +129,9 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     {[
-                      { name: "name", label: "Full Name", type: "text", placeholder: "John Doe", required: true },
-                      { name: "email", label: "Email Address", type: "email", placeholder: "john@company.com", required: true },
-                      { name: "phone", label: "Phone Number", type: "tel", placeholder: "+91 98765 43210", required: false },
+                      { name: "name", label: "Full Name", type: "text", placeholder: "Your Name", required: true },
+                      { name: "email", label: "Email Address", type: "email", placeholder: "Your Email Address", required: true },
+                      { name: "phone", label: "Phone Number", type: "tel", placeholder: "Your Phone Number", required: false },
                     ].map((field) => (
                       <div key={field.name}>
                         <label className="block text-[10px] tracking-[0.2em] uppercase text-charcoal/70 mb-2 font-bold"

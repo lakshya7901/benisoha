@@ -22,7 +22,7 @@ export default function Footer() {
     },
     {
       label: "Telegram",
-      href: "https://t.me/benisohafusion",
+      href: "https://t.me/benisoha",
       icon: (
         <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
           <path d="M21.944 2.506a1.5 1.5 0 00-1.54-.22L2.56 9.348a1.5 1.5 0 00.08 2.79l4.03 1.35 1.56 4.9a1.5 1.5 0 002.46.6l2.23-2.13 4.28 3.18a1.5 1.5 0 002.36-1.01l2.44-14.5a1.5 1.5 0 00-.06-1.02zM9.5 16.5l-.9-3.3 7.4-6.8-6.5 7.8v2.3z" />
@@ -110,7 +110,7 @@ export default function Footer() {
 
             <p className="text-sm text-charcoal/80 leading-relaxed max-w-sm font-medium mb-0 sm:mb-7"
               style={{ fontFamily: "var(--font-dm-sans)" }}>
-                Android apps and electrical infrastructure company working in GSS, LT/HT line, transformer and automation apps.
+                Android apps and Electrical infrastructure company working in GSS, LT/HT line, Transformer and Automation apps.
             </p>
 
             {/* Hidden on mobile, visible on tablet/desktop */}

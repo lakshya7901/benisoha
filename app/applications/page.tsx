@@ -20,7 +20,7 @@ const proApps = [
   {
     title: "Clone Master - Multi Dual Space Pro",
     desc: "We are actively building additional Android utilities. When a new application is published, it will appear here with official Play Store and direct APK download links.",
-    tags: ["Android", "Utility", "Coming Soon"],
+    tags: ["Android", "Tools", "Multi-Space"],
     link: "https://clone-master.en.uptodown.com/android",
   },
 ];

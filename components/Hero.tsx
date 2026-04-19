@@ -164,7 +164,7 @@ export default function Hero() {
                   </svg>
                 </div>
                 <p className="text-xs tracking-[0.25em] uppercase text-charcoal font-bold"
-                  style={{ fontFamily: "var(--font-dm-sans)" }}>APPLICATIONS &amp; POWER</p>
+                  style={{ fontFamily: "var(--font-dm-sans)" }}>Software &amp; Electrical</p>
                 <p className="text-[11px] text-charcoal/60 mt-1 tracking-wider font-medium"
                   style={{ fontFamily: "var(--font-dm-sans)" }}>Benisoha Fusion LLP</p>
               </div>

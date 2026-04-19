@@ -64,7 +64,7 @@ export default function Loader() {
         letterSpacing: "0.25em", textTransform: "uppercase",
         fontFamily: "var(--font-dm-sans)",
       }}>
-        APPLICATIONS & POWER
+        Software & Electrical
       </p>
 
       <style>{`
